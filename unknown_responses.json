@@ -1,0 +1,272 @@
+[
+  {
+    "user_id": 123,
+    "timestamp": "1748290126.0410347",
+    "original_input": "how far",
+    "clarified_input": "means good"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290151.942944",
+    "original_input": "im doing great now",
+    "clarified_input": "meaning im fine and good"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290169.4116688",
+    "original_input": "im doing great",
+    "clarified_input": "means im good"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290225.795031",
+    "original_input": "life is hard",
+    "clarified_input": "yeah, life really can feel heavy sometimes. when it gets like this, try focusing on just one small thing you can do today—like drinking water, stepping outside, or taking a deep breath. you don’t have to fix everything at once. if you’d like more support."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290298.4936619",
+    "original_input": "just wanna chile",
+    "clarified_input": "totally get that. it’s okay to take a break and just breathe. let yourself rest—you’ve earned it."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290318.4031768",
+    "original_input": "just wanna chill",
+    "clarified_input": "totally get that. it’s okay to take a break and just breathe. let yourself rest—you’ve earned it."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290333.4592896",
+    "original_input": "i just want to chill",
+    "clarified_input": "totally get that. it’s okay to take a break and just breathe. let yourself rest—you’ve earned it."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290418.8348966",
+    "original_input": "im going through trauma from the past war",
+    "clarified_input": "that sounds incredibly heavy, and i want you to know your pain is valid. trauma from something as intense as war doesn’t just disappear with time — it leaves deep marks on the mind and body. some days may feel okay, and others may suddenly bring everything back like it just happened. when those waves hit, try grounding yourself in the present: feel your feet on the floor, your breath in your chest, your hands resting where they are. you are safe right now. it might help to gently write out what memories keep returning or what your body is trying to tell you. you don’t need to go through this alone — even small steps toward healing count. if you're open to it, we can take one together."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290600.0500882",
+    "original_input": "i keep getting angry over small things and i don't even know why.",
+    "clarified_input": "that reaction might be carrying the weight of something deeper. sometimes anger is how our wounds ask for attention—especially if they've been ignored for a long time. it could be pain from earlier in life trying to protect you in the only way it knows how. you're not broken. you're responding from a place that once needed defense. want to try a calm reflection exercise to uncover what might be underneath that anger?"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290636.397234",
+    "original_input": "i feel like i’m always running from something, but i don’t know what.",
+    "clarified_input": "that feeling of running can come from past pain that never had space to heal. when we carry unresolved trauma, our nervous system stays alert — always ready to protect us, even when we don’t need it anymore. you’re safe now. if you want, i can guide you through a simple grounding exercise to help you feel more present. just say 'yep'."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290659.9299252",
+    "original_input": "i don’t feel anything anymore. just numb.",
+    "clarified_input": "numbness is a quiet kind of pain. it often means you’ve had to shut down just to survive. that’s not weakness — that’s how strong you had to be. but you deserve to feel alive again, slowly and safely. if you’re ready, we can take a small step together."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290680.1409814",
+    "original_input": "i keep repeating the same patterns in my relationships.",
+    "clarified_input": "patterns often come from old wounds — especially ones formed in childhood. if love once felt unsafe or unpredictable, your heart may still be trying to protect you. the good news is, those patterns aren’t fixed. you can break them with awareness and care. want to explore that a bit?"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290713.0234182",
+    "original_input": "sometimes i feel like something is wrong with me.",
+    "clarified_input": "there’s nothing wrong with you — but something might have happened to you. trauma has a way of making us question our worth. but your worth has never changed. you are still whole. i’m here to help you remember that."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290731.936978",
+    "original_input": "i’m tired of pretending i’m okay.",
+    "clarified_input": "that’s a powerful truth to say out loud. pretending takes energy, especially when you’re hurting inside. you deserve spaces where you don’t have to wear a mask. this is one of them. i see you. if you’d like, i can help you sit with the real you — gently."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290806.8195813",
+    "original_input": "i’m tired of pretending i’m okay",
+    "clarified_input": "that’s a powerful truth to say out loud. pretending takes energy, especially when you’re hurting inside. you deserve spaces where you don’t have to wear a mask. this is one of them. i see you. if you’d like, i can help you sit with the real you — gently"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290976.6101851",
+    "original_input": "tired",
+    "clarified_input": "rest isn’t weakness. your body might be asking for gentleness. try placing your hand on your chest and just breathe for a few seconds."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290993.0880537",
+    "original_input": "numb",
+    "clarified_input": "feeling nothing is a sign your heart has been carrying too much. you’re not alone. let’s sit in silence together for a moment—breathe with me."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291007.3824759",
+    "original_input": "low",
+    "clarified_input": "when your energy is low, try doing just one kind thing for yourself today. even drinking water counts. small care is still care."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291026.9551592",
+    "original_input": "alone",
+    "clarified_input": "ou may feel alone, but you're not invisible. i'm here, and i see you. want a calming thought to hold onto?"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291042.6284",
+    "original_input": "empty",
+    "clarified_input": "that emptiness might be protecting you from overwhelm. let’s gently invite a little light in. you deserve to feel safe and full again."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291061.9278474",
+    "original_input": "meh",
+    "clarified_input": "even “meh” has meaning. not every day has to be a breakthrough. just being here right now means something is already healing."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291076.496339",
+    "original_input": "lost",
+    "clarified_input": "feeling lost doesn’t mean you have no path. it just means the map isn’t clear yet. let’s pause and listen together for the next step."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291092.0797882",
+    "original_input": "broken",
+    "clarified_input": "you’re not broken. you’re healing. sometimes it just takes a while for the cracks to show us the light."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291139.0676725",
+    "original_input": "feel better",
+    "clarified_input": "let’s begin slowly. close your eyes and take one deep breath. peace starts in small moments like this."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291151.9233222",
+    "original_input": "help me",
+    "clarified_input": "i'm here with you. whatever you're carrying, you don’t have to hold it all at once. let’s take it one breath at a time."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291167.2888072",
+    "original_input": "so heavy",
+    "clarified_input": "that weight you feel is real. you don’t have to explain it—just know that it’s okay to rest from carrying it."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291180.3246975",
+    "original_input": "not okay",
+    "clarified_input": "it’s brave to admit that. being “not okay” is part of healing. let’s gently hold space for whatever you feel."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291193.1924434",
+    "original_input": "need peace",
+    "clarified_input": "let’s slow everything down. breathe in through your nose… and out. you’re creating a small pocket of peace right now."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291222.1185365",
+    "original_input": "quiet mind",
+    "clarified_input": "let’s quiet the noise together. try noticing five things around you. you’re here, you’re safe, and you’re not alone."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291244.6142902",
+    "original_input": "quite mind",
+    "clarified_input": "let’s quiet the noise together. try noticing five things around you. you’re here, you’re safe, and you’re not alone."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291304.7967858",
+    "original_input": "i need help",
+    "clarified_input": "i'm here with you. whatever you're carrying, you don’t have to hold it all at once. let’s take it one breath at a time."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291388.681589",
+    "original_input": "so many things",
+    "clarified_input": "sounds like your heart is carrying more than it can hold right now. let’s untangle one feeling at a time — no rush"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291404.970901",
+    "original_input": "just feel stuck",
+    "clarified_input": "feeling stuck is okay — it means something inside you is asking to be heard. let’s sit with that feeling for a moment, without judgment."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291422.9676175",
+    "original_input": "feel stuck",
+    "clarified_input": "feeling stuck is okay — it means something inside you is asking to be heard. let’s sit with that feeling for a moment, without judgment."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291437.7116585",
+    "original_input": "can't explain",
+    "clarified_input": "you don’t have to explain it perfectly. some pain lives beyond words. i’m still here, and we can be quiet together if that helps."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291444.4997654",
+    "original_input": "i cant explain",
+    "clarified_input": "you don’t have to explain it perfectly. some pain lives beyond words. i’m still here, and we can be quiet together if that helps."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291450.2939553",
+    "original_input": "cant explain",
+    "clarified_input": "you don’t have to explain it perfectly. some pain lives beyond words. i’m still here, and we can be quiet together if that helps."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291671.5312963",
+    "original_input": "but how",
+    "clarified_input": "a good place to start is with just one line. it can be as simple as “i feel…” or “today was…” no need to write a story — just what’s on your mind or heart right now."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291800.0925262",
+    "original_input": "okay go on",
+    "clarified_input": "a good place to start is with just one line. it can be as simple as “i feel…” or “today was…” you don’t need to write a story, just what’s on your mind or heart right now. you could also try describing a place where you feel safe or naming a small thing that made you smile recently. even writing down a question you have for yourself can open new paths. the important part is to be gentle and honest with yourself and not worry about getting it right."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291840.3358407",
+    "original_input": "i don’t feel safe",
+    "clarified_input": "feeling unsafe can be really heavy. maybe start your journal by writing about a place or moment where you felt even a little calm or peace. it could help remind you that safety is possible."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291853.890828",
+    "original_input": "i can’t calm down",
+    "clarified_input": "when calming feels hard, try focusing on your breath. breathe in slowly for four seconds, hold for four, then breathe out for four. repeat a few times and see if that helps."
+  },
+  {
+    "user_id": "123",
+    "timestamp": "1748344678.3657331",
+    "original_input": "im feeling sad",
+    "clarified_input": "im sad"
+  },
+  {
+    "user_id": "123",
+    "timestamp": "1748344702.5488856",
+    "original_input": "help me",
+    "clarified_input": "need him"
+  },
+  {
+    "user_id": "123",
+    "timestamp": "1748344744.1450229",
+    "original_input": "need help",
+    "clarified_input": "i don’t feel safe"
+  },
+  {
+    "user_id": "123",
+    "timestamp": "1748344790.189983",
+    "original_input": "but how",
+    "clarified_input": "start small. you could write just one sentence: “today, i feel…” don’t worry about getting it right — just let it out as it comes. healing isn’t a straight line."
+  }
+]

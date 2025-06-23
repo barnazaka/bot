@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | CalmBot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='image.png') }}">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full bg-white shadow p-4 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="text-2xl font-bold">🌱 CalmBot</div>
+      <div class="hidden md:flex space-x-6">
+        <a href="/" class="text-gray-700 hover:text-green-600">Home</a>
+        <a href="/about" class="text-green-600 font-semibold">About</a>
+        <a href="/support" class="text-gray-700 hover:text-green-600">Contact</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-3xl focus:outline-none">☰</button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2 px-4">
+      <a href="/" class="block text-gray-700 hover:text-green-600">Home</a>
+      <a href="/about" class="block text-green-600 font-semibold">About</a>
+      <a href="/support" class="block text-gray-700 hover:text-green-600">Contact</a>
+    </div>
+  </nav>
+  <div class="pt-20"></div>
+
+  <!-- About Hero -->
+  <section class="bg-gradient-to-b from-white to-slate-50 py-12 text-center">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">About CalmBot</h1>
+    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+      Discover how CalmBot supports emotional wellbeing through AI-powered conversation and self-care tools.
+    </p>
+  </section>
+
+  <!-- About Content -->
+  <section class="max-w-5xl mx-auto py-12 px-6 space-y-8">
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold text-gray-800">What is CalmBot?</h2>
+      <p class="text-gray-700 leading-relaxed">
+        CalmBot is your personal AI-powered wellbeing companion designed to support you through life's emotional ups and
+        downs. Whether you're dealing with stress, sadness, anxiety, or just need a calm space to express your feelings,
+        CalmBot is here to listen without judgment.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Through mindful conversation and practical exercises like journaling, breathing techniques, and gratitude
+        reflections, CalmBot helps you pause, process, and find moments of calm whenever you need it.
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold text-gray-800">Why Use CalmBot?</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Safe, supportive, and anonymous emotional check-ins</li>
+        <li>Guided wellbeing exercises for mindfulness and stress relief</li>
+        <li>Available anytime — no appointment or sign-up needed</li>
+        <li>Accessible via web, Telegram, WhatsApp, and social platforms</li>
+      </ul>
+    </div>
+
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold text-gray-800">Contact Us</h2>
+      <p class="text-gray-700">
+        Have a question or need support? Reach out to us anytime:
+      </p>
+      <ul class="text-gray-700 space-y-2">
+        <li>Email: <a href="mailto:barnazaka@gmail.com" class="text-green-600 hover:underline">barnazaka@gmail.com</a></li>
+        <li>Phone: <a href="tel:+2349110125055" class="text-green-600 hover:underline">+2349110125055</a></li>
+        <li>Telegram: <a href="https://t.me/calm56bot" target="_blank"
+            class="text-green-600 hover:underline">@calm56bot</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-100 py-6 text-center text-gray-600 text-sm">
+    © 2025 CalmBot. All rights reserved. Barnazaka_designed
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+
+</html>

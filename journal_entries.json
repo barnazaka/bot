@@ -1,0 +1,32 @@
+[
+  {
+    "user_id": 123,
+    "timestamp": "1748289419.7987533",
+    "mood": "happiness",
+    "entry": "hello"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290870.0411448",
+    "mood": "happiness",
+    "entry": "Im really happy now"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291499.8216808",
+    "mood": "happiness",
+    "entry": "Im doing great. Feeling happy of late"
+  },
+  {
+    "user_id": "123",
+    "timestamp": "1748344632.7500856",
+    "mood": "sadness",
+    "entry": "I feel great today!"
+  },
+  {
+    "user_id": "123",
+    "timestamp": "1748360337.1423538",
+    "mood": "happiness",
+    "entry": "Feeling happy"
+  }
+]

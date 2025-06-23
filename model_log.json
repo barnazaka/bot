@@ -1,0 +1,1326 @@
+[
+  {
+    "input": "hello",
+    "output": "Hey there! I'm so glad you're here. How's your day going so far?"
+  },
+  {
+    "input": "hi",
+    "output": "Hey there! I'm so glad you're here. How's your day going so far?"
+  },
+  {
+    "input": "good morning",
+    "output": "Good morning to you too! Let's make today a calm and happy one. How's your day going so far?"
+  },
+  {
+    "input": "I feel sad",
+    "output": "I'm so sorry you're feeling sad. Try taking a few deep breaths and picturing a peaceful place. I'm here for you."
+  },
+  {
+    "input": "I'm stressed",
+    "output": "Stress can be tough. How about a quick stretch or a cup of tea to ease your mind? You've got this."
+  },
+  {
+    "input": "My life is tough",
+    "output": "I hear you, life can be heavy sometimes. Let's focus on one small thing that brings you joy today."
+  },
+  {
+    "input": "I'm lonely",
+    "output": "Loneliness can hurt, but you're not alone right now. Reach out to someone you trust, or let's chat more."
+  },
+  {
+    "input": "Nothing is going right",
+    "output": "When everything feels off, it's exhausting. Try listing one tiny win today, like getting out of bed. I'm cheering you on."
+  },
+  {
+    "input": "I'm anxious",
+    "output": "Anxiety can feel overwhelming. Try the 4-4-8 breathing technique: inhale for 4, hold for 4, exhale for 8. I'm right here."
+  },
+  {
+    "input": "I'm tired of this",
+    "output": "I feel how draining this is for you. Take a moment to rest and recharge. You deserve a break."
+  },
+  {
+    "input": "I'm broke",
+    "output": "Money worries are so hard. Can you set a small goal, like saving a dollar this week? I believe in you."
+  },
+  {
+    "input": "Money is tight",
+    "output": "Financial stress is rough. Try tracking one expense today to feel a bit more in control. I'm here to listen."
+  },
+  {
+    "input": "I have no job",
+    "output": "Being jobless is tough. Maybe check out an online course or connect with a friend for ideas. You're not alone."
+  },
+  {
+    "input": "I'm overwhelmed",
+    "output": "Feeling overwhelmed is a lot to carry. Break one task into tiny steps, and let's tackle it together."
+  },
+  {
+    "input": "I'm good now",
+    "output": "Good to know. Please take good care of yourself"
+  },
+  {
+    "input": "im good",
+    "output": "Good to hear, what brought you here today?"
+  },
+  {
+    "input": "good",
+    "output": "Good to hear, what brought you here today?"
+  },
+  {
+  "input": "i came here because im not feeling too good about myself",
+  "output": "I'm really sorry you're feeling that way. I'm here for you. Would you like to talk about what's been bothering you?"
+},
+{
+  "input": "life",
+  "output": "Life can feel really heavy sometimes. If it’s all feeling like too much right now, you’re not alone. I’m here for you — want to tell me a bit about what’s been weighing on you?"
+},
+{
+  "input": "my thoughts are killing me",
+  "output": "I'm really sorry you're feeling this way. Your mind can be a tough place when you're overwhelmed, but you're not alone right now. Would you like to try a grounding technique with me to calm your thoughts a little?"
+},
+{
+  "input": "my financial life is in ruins",
+  "output": "I'm really sorry you're going through that. Financial stress can feel overwhelming and isolating. You're not alone, and it's okay to feel the weight of it. Would it help to talk about what part of your financial life is most stressful right now?"
+},
+{
+  "input": "i'm in debt and i can't see a way out",
+  "output": "That sounds really heavy, and it's okay to feel scared about it. You’ve already taken a strong first step by talking about it. Would it help to go through some small steps together to regain a bit of control?"
+},
+{
+    "input": "I feel sad",
+    "output": "I'm so sorry you're feeling sad. Try journaling your thoughts or listening to calming music. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "My life is tough",
+    "output": "Life can be really hard sometimes. Set a small, achievable goal for today, like a short walk. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "My life is ruin",
+    "output": "I hear how tough things feel. Take a moment to breathe deeply or write down one thing you're grateful for. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "I'm angry",
+    "output": "Anger can be intense. Count backward from 10 slowly to cool off. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "Im going through alot",
+    "output": "It sounds like a lot is on your mind. List one thing you can address today to feel lighter. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "My work is stressing me",
+    "output": "Work stress is tough. Take a 5-minute break to breathe deeply or stretch. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "I'm unemployed",
+    "output": "Being unemployed is hard. Update your resume or reach out to a friend for support. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "I'm going bankrupt",
+    "output": "Bankruptcy feels heavy. Set a small financial goal, like saving $1 a day. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "my financial life",
+    "output": "Financial stress is rough. Make a small budget or list one expense to cut. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "Financial problems",
+    "output": "Financial struggles are tough. Try tracking your expenses for a day to feel more in control. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "You don't understand",
+    "output": "I'm sorry if I didn't get that right. Try taking a deep breath or sharing a bit more when you're ready. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "yes",
+    "output": "Yep, let's keep going. How about a quick mindfulness exercise, like focusing on your breath?"
+  },
+  {
+    "input": "I want more",
+    "output": "Thanks for sharing. How about a short walk to clear your mind? If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "Can we talk",
+    "output": "I'm here for you! Share what's on your mind, or write down one thing you're grateful for. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "I'm overwhelmed",
+    "output": "Feeling overwhelmed is tough. Break one task into smaller steps to start. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "I'm stressed",
+    "output": "Stress can be heavy. Try a 5-minute meditation or a quick stretch. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "Everything is falling apart",
+    "output": "I'm so sorry you're feeling this way. Focus on one small thing you can control today, like making a list. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "I have no job",
+    "output": "Not having a job is really hard. Look into one online course or connect with a community. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "Money is tight",
+    "output": "I hear how stressful that is. Try cutting one small expense, like coffee runs, for a week. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "I'm broke",
+    "output": "Being broke feels overwhelming. Can you set a tiny savings goal, like $1 a week? If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "I'm anxious",
+    "output": "Anxiety can feel heavy. Try a 4-7-8 breathing exercise: inhale for 4, hold for 7, exhale for 8. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "I don't know what to do",
+    "output": "Feeling lost is tough. Write down one thing you're feeling to start sorting it out. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "I'm lonely",
+    "output": "Loneliness can be hard. Reach out to a friend or family member, even for a quick chat. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "I'm tired of this",
+    "output": "I hear how exhausting this is. Take a moment for a quick rest or a walk to reset. If you want more ideas, just say 'yep'."
+  },
+  {
+    "input": "Nothing is going right",
+    "output": "When everything feels off, it's tough. Find one small win today, like making your bed. If you want more ideas, just say 'yep'."
+  },
+  {
+  "input": "i lost my job",
+  "output": "I'm really sorry to hear that. Job loss can shake your sense of stability and self-worth. But please know this doesn’t define your value. I'm here for you — would it help to talk about what you're going through right now?"
+},
+{
+  "input": "sure, what kind of grounding technique?",
+  "output": "Let's try the 5-4-3-2-1 technique. Name 5 things you can see, 4 you can touch, 3 you can hear, 2 you can smell, and 1 you can taste. It helps bring your mind back to the present moment."
+},
+{
+  "input": "sure",
+  "output": "Let's try the 5-4-3-2-1 technique. Name 5 things you can see, 4 you can touch, 3 you can hear, 2 you can smell, and 1 you can taste. It helps bring your mind back to the present moment."
+},
+{
+  "input": "i don't feel like doing anything",
+  "output": "That’s okay. Some days are just hard, and it’s enough to simply breathe and exist. You don’t need to force yourself to be productive right now — just take things one moment at a time."
+},
+{
+  "input": "what if i can't stop these thoughts?",
+  "output": "That sounds really hard, and I want you to know you don’t have to go through it alone. If it ever feels like too much, it’s okay to reach out for help. Talking to someone you trust or a mental health professional can make a big difference. I’m here with you too."
+},
+  {
+    "input": "Can we talk",
+    "output": "Absolutely, I'm all ears! Share what's on your heart, and let's sort through it together."
+  },
+  {
+    "input": "yes",
+    "output": "Great, let's keep chatting! What's one thing you'd love to focus on right now?"
+  },
+  {
+    "input": "I want more",
+    "output": "I love your enthusiasm! How about trying a short walk to clear your mind? I'm here for more ideas."
+  },
+  {
+    "input": "I'm happy today",
+    "output": "That's so wonderful to hear! What's sparking your joy today? Let's celebrate it!"
+  },
+  {
+    "input": "I feel calm",
+    "output": "I'm so glad you're feeling calm. Savor this moment with a cozy drink or some soft music."
+  },
+  {
+    "input": "I'm grateful",
+    "output": "Gratitude is beautiful! What's one thing you're thankful for today? Let's share the positivity."
+  },
+  {
+    "input": "I need to relax",
+    "output": "You deserve some peace. Try a 5-minute meditation or a warm bath to unwind. I'm here for you."
+  },
+  {
+    "input": "I'm worried",
+    "output": "Worries can weigh heavy. Write down one thing you're anxious about, and let's talk it through."
+  },
+  {
+    "input": "I can't sleep",
+    "output": "Trouble sleeping is tough. Try a bedtime routine with no screens and some calming tea. I'm here to help."
+  },
+  {
+    "input": "I'm angry",
+    "output": "Anger can be intense. Take a slow count from 10 to 1 to cool down. I'm here to help."
+  },
+  {
+    "input": "I feel lost",
+    "output": "Feeling lost is hard. Let's start with one small action, like writing down how you feel. I've got your back."
+  },
+  {
+    "input": "I need motivation",
+    "output": "You're stronger than you know! Set one tiny goal today, like making your bed, and celebrate it. Let's do this!"
+  },
+  {
+    "input": "I'm nervous",
+    "output": "Nerves can be tricky. Picture a happy outcome and take deep breaths. You're going to do great."
+  },
+  {
+    "input": "I'm depressed",
+    "output": "I'm so sorry you're feeling this way. Try a small act of self-care, like a warm shower. I'm here to listen."
+  },
+  {
+    "input": "I feel empty",
+    "output": "That emptiness can feel heavy. Reach out to someone you love or try a hobby you enjoy. I'm with you."
+  },
+  {
+    "input": "I'm scared",
+    "output": "Fear can be overwhelming. Ground yourself by naming 5 things you see around you. I'm right here."
+  },
+  {
+    "input": "I need hope",
+    "output": "Hope is always there, even in tough times. Think of one thing you're looking forward to, no matter how small. I believe in you."
+  },
+  {
+    "input": "I'm frustrated",
+    "output": "Frustration is tough. Take a quick walk to reset, and let's talk about what's going on."
+  },
+  {
+    "input": "I feel stuck",
+    "output": "Feeling stuck is hard, but you can move forward. Try one new thing today, like a short journal entry. I'm cheering you on."
+  },
+  {
+    "input": "I'm exhausted",
+    "output": "You sound so tired. Give yourself permission to rest, even for 10 minutes. You deserve it."
+  },
+  {
+    "input": "I need a break",
+    "output": "Absolutely, you deserve some downtime. How about a cozy moment with a favorite book or show?"
+  },
+  {
+    "input": "I'm proud of myself",
+    "output": "That's amazing! Tell me what you're proud of—I'm all ears and cheering for you!"
+  },
+  {
+    "input": "I did something good",
+    "output": "Wow, that's so great to hear! Share what you did, and let's celebrate your win!"
+  },
+  {
+    "input": "I'm hopeful",
+    "output": "I love that hope in your heart! What's inspiring you today? Let's keep that spark alive."
+  },
+  {
+    "input": "I need to focus",
+    "output": "Let's get that focus back. Try a 5-minute timer for one task, and I'll be here to support you."
+  },
+  {
+    "input": "I'm feeling okay",
+    "output": "Okay is a great start! Want to share what's going on, or just enjoy this moment together?"
+  },
+  {
+    "input": "I need advice",
+    "output": "I'm here to help. What's on your mind? Let's figure out the next step together."
+  },
+  {
+    "input": "I'm confused",
+    "output": "Confusion can be tough. Let's break it down—what's got you puzzled? I'm here to sort it out."
+  },
+  {
+    "input": "I feel ignored",
+    "output": "I'm so sorry you feel that way—I'm listening now. Want to share more? You're important to me."
+  },
+  {
+    "input": "I'm excited",
+    "output": "That's so awesome! What's got you so excited? Let's dive into that joy!"
+  },
+  {
+    "input": "I need to vent",
+    "output": "Vent away, I'm all ears! Let it all out, and I'll be here to support you."
+  },
+  {
+    "input": "I'm feeling low",
+    "output": "I'm here for you. Try a small act of kindness for yourself, like a favorite snack. Let's lift your spirits."
+  },
+  {
+    "input": "I'm restless",
+    "output": "Restlessness can be tough. How about a quick dance to your favorite song to shake it off?"
+  },
+  {
+    "input": "I need peace",
+    "output": "Peace is so important. Find a quiet spot and focus on your breath for a minute. I'm with you."
+  },
+  {
+    "input": "I'm thankful",
+    "output": "That's beautiful! What's got you feeling thankful today? Let's share the gratitude."
+  },
+  {
+    "input": "I just need someone",
+    "output": "I'm right here for you, like a friend who's always ready to listen. What's on your heart?"
+  },
+  {
+    "input": "can we stay positive?",
+    "output": "I love that you want to stay positive! Let’s share one thing that’s bringing you joy today. I'm here for you."
+  },
+  {
+    "input": "can we get motivated?",
+    "output": "You're not alone with can we get motivated?. Let's try writing down your thoughts together. What do you think?"
+  },
+  {
+    "input": "i'm struggling with motivation",
+    "output": "It's okay to feel . trying a 5-minute meditation can help you find some calm. I'm here."
+  },
+  {
+    "input": "i'm frustrated today",
+    "output": "I hear you, i'm frustrated today can be tough. Try writing down your thoughts to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i'm happy about a new hobby",
+    "output": "I'm glad you shared i'm happy about a new hobby! Let's having a cup of tea to keep that positive vibe going."
+  },
+  {
+    "input": "i feel like grateful",
+    "output": "I'm so sorry you're feeling grateful. How about stretching for a bit to ease your mind?"
+  },
+  {
+    "input": "can you help me focus?",
+    "output": "I hear you, can you help me focus? can be tough. Try calling a friend to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "can we talk?",
+    "output": "can we talk? sounds heavy. stretching for a bit might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "why do i feel angry?",
+    "output": "I hear you, why do i feel angry? can be tough. Try listing one thing you're grateful for to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i'm exhausted today",
+    "output": "It's okay to feel exhausted. listening to calming music can help you find some calm. I'm here."
+  },
+  {
+    "input": "i want to feel peaceful",
+    "output": "I'm so sorry you're feeling peaceful. How about calling a friend to ease your mind?"
+  },
+  {
+    "input": "i'm feeling depressed",
+    "output": "i'm feeling depressed sounds heavy. stretching for a bit might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "my health is tough",
+    "output": "I'm so sorry you're feeling . How about going for a short walk to ease your mind?"
+  },
+  {
+    "input": "i feel like lost",
+    "output": "I hear you, i feel like lost can be tough. Try taking a few deep breaths to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i'm so nervous",
+    "output": "I'm glad you shared i'm so nervous! Let's writing down your thoughts to keep that positive vibe going."
+  },
+  {
+    "input": "what do i do about focus?",
+    "output": "I'm so sorry you're feeling . How about listing one thing you're grateful for to ease your mind?"
+  },
+  {
+    "input": "why do i feel depressed?",
+    "output": "why do i feel depressed? sounds heavy. listening to calming music might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i feel like happy",
+    "output": "You're not alone with i feel like happy. Let's try going for a short walk together. What do you think?"
+  },
+  {
+    "input": "can we relax?",
+    "output": "I hear you, can we relax? can be tough. Try listing one thing you're grateful for to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i'm so scared",
+    "output": "It's okay to feel scared. having a cup of tea can help you find some calm. I'm here."
+  },
+  {
+    "input": "i'm so grateful",
+    "output": "I'm glad you shared i'm so grateful! Let's taking a few deep breaths to keep that positive vibe going."
+  },
+  {
+    "input": "i'm so tired",
+    "output": "I'm so sorry you're feeling tired. How about trying a 5-minute meditation to ease your mind?"
+  },
+  {
+    "input": "i feel like empty",
+    "output": "It's okay to feel empty. listening to calming music can help you find some calm. I'm here."
+  },
+  {
+    "input": "i'm lonely today",
+    "output": "I hear you, i'm lonely today can be tough. Try having a cup of tea to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i'm so empty",
+    "output": "You're not alone with i'm so empty. Let's try stretching for a bit together. What do you think?"
+  },
+  {
+    "input": "i'm struggling with loneliness",
+    "output": "I'm so sorry you're feeling . How about taking a few deep breaths to ease your mind?"
+  },
+  {
+    "input": "i'm happy about my progress",
+    "output": "I'm so sorry you're feeling happy. How about taking a few deep breaths to ease your mind?"
+  },
+  {
+    "input": "i feel like depressed",
+    "output": "I'm glad you shared i feel like depressed! Let's going for a short walk to keep that positive vibe going."
+  },
+  {
+    "input": "i'm having trouble with loneliness",
+    "output": "It's okay to feel . listening to calming music can help you find some calm. I'm here."
+  },
+  {
+    "input": "i'm so overwhelmed",
+    "output": "I'm glad you shared i'm so overwhelmed! Let's writing down your thoughts to keep that positive vibe going."
+  },
+  {
+    "input": "i need help with focus",
+    "output": "I'm glad you shared i need help with focus! Let's calling a friend to keep that positive vibe going."
+  },
+  {
+    "input": "i'm feeling nervous",
+    "output": "You're not alone with i'm feeling nervous. Let's try going for a short walk together. What do you think?"
+  },
+  {
+    "input": "i'm so depressed",
+    "output": "i'm so depressed sounds heavy. going for a short walk might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i want to feel angry",
+    "output": "You're not alone with i want to feel angry. Let's try listing one thing you're grateful for together. What do you think?"
+  },
+  {
+    "input": "i'm so sad",
+    "output": "i'm so sad sounds heavy. listening to calming music might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i'm so calm",
+    "output": "I'm so sorry you're feeling calm. How about taking a few deep breaths to ease your mind?"
+  },
+  {
+    "input": "i'm excited today",
+    "output": "I'm so sorry you're feeling excited. How about listing one thing you're grateful for to ease your mind?"
+  },
+  {
+    "input": "what do i do about motivation?",
+    "output": "I'm so sorry you're feeling . How about taking a few deep breaths to ease your mind?"
+  },
+  {
+    "input": "i'm so exhausted",
+    "output": "It's okay to feel exhausted. listening to calming music can help you find some calm. I'm here."
+  },
+  {
+    "input": "i'm stressed today",
+    "output": "It's okay to feel stressed. listing one thing you're grateful for can help you find some calm. I'm here."
+  },
+  {
+    "input": "i'm so excited",
+    "output": "It's okay to feel excited. listing one thing you're grateful for can help you find some calm. I'm here."
+  },
+  {
+    "input": "why do i feel grateful?",
+    "output": "why do i feel grateful? sounds heavy. trying a 5-minute meditation might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i'm so happy",
+    "output": "You're not alone with i'm so happy. Let's try writing down your thoughts together. What do you think?"
+  },
+  {
+    "input": "i need help with sleep",
+    "output": "I'm so sorry you're feeling . How about stretching for a bit to ease your mind?"
+  },
+  {
+    "input": "why do i feel excited?",
+    "output": "It's okay to feel excited. taking a few deep breaths can help you find some calm. I'm here."
+  },
+  {
+    "input": "i'm having trouble with focus",
+    "output": "i'm having trouble with focus sounds heavy. calling a friend might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "what do i do about money?",
+    "output": "You're not alone with what do i do about money?. Let's try listing one thing you're grateful for together. What do you think?"
+  },
+  {
+    "input": "what do i do about loneliness?",
+    "output": "I hear you, what do i do about loneliness? can be tough. Try stretching for a bit to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "can you help me find peace?",
+    "output": "I'm so sorry you're feeling . How about listing one thing you're grateful for to ease your mind?"
+  },
+  {
+    "input": "i'm so frustrated",
+    "output": "I hear you, i'm so frustrated can be tough. Try calling a friend to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i need to feel better",
+    "output": "It's okay to feel . taking a few deep breaths can help you find some calm. I'm here."
+  },
+  {
+    "input": "why do i feel lost?",
+    "output": "You're not alone with why do i feel lost?. Let's try going for a short walk together. What do you think?"
+  },
+  {
+    "input": "i'm having trouble with anger",
+    "output": "I hear you, i'm having trouble with anger can be tough. Try calling a friend to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "why do i feel nervous?",
+    "output": "You're not alone with why do i feel nervous?. Let's try having a cup of tea together. What do you think?"
+  },
+  {
+    "input": "i'm nervous today",
+    "output": "I hear you, i'm nervous today can be tough. Try having a cup of tea to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i need help with relationships",
+    "output": "I'm so sorry you're feeling . How about taking a few deep breaths to ease your mind?"
+  },
+  {
+    "input": "i want to feel depressed",
+    "output": "I hear you, i want to feel depressed can be tough. Try writing down your thoughts to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "can we calm down?",
+    "output": "I hear you, can we calm down? can be tough. Try taking a few deep breaths to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i want to feel frustrated",
+    "output": "I hear you, i want to feel frustrated can be tough. Try trying a 5-minute meditation to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "can you help me feel better?",
+    "output": "I'm glad you shared can you help me feel better?! Let's having a cup of tea to keep that positive vibe going."
+  },
+  {
+    "input": "what do i do about anger?",
+    "output": "what do i do about anger? sounds heavy. stretching for a bit might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i'm having trouble with anxiety",
+    "output": "i'm having trouble with anxiety sounds heavy. stretching for a bit might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i want to feel nervous",
+    "output": "I'm glad you shared i want to feel nervous! Let's having a cup of tea to keep that positive vibe going."
+  },
+  {
+    "input": "i'm feeling stressed",
+    "output": "You're not alone with i'm feeling stressed. Let's try having a cup of tea together. What do you think?"
+  },
+  {
+    "input": "i want to feel sad",
+    "output": "I'm so sorry you're feeling sad. How about calling a friend to ease your mind?"
+  },
+  {
+    "input": "i'm grateful today",
+    "output": "I'm glad you shared i'm grateful today! Let's listing one thing you're grateful for to keep that positive vibe going."
+  },
+  {
+    "input": "i'm happy about my job",
+    "output": "I hear you, i'm happy about my job can be tough. Try stretching for a bit to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i'm calm today",
+    "output": "It's okay to feel calm. listing one thing you're grateful for can help you find some calm. I'm here."
+  },
+  {
+    "input": "i'm happy about my family",
+    "output": "i'm happy about my family sounds heavy. having a cup of tea might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i feel like anxious",
+    "output": "I'm glad you shared i feel like anxious! Let's trying a 5-minute meditation to keep that positive vibe going."
+  },
+  {
+    "input": "i want to feel excited",
+    "output": "i want to feel excited sounds heavy. stretching for a bit might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i want to feel overwhelmed",
+    "output": "I'm so sorry you're feeling overwhelmed. How about calling a friend to ease your mind?"
+  },
+  {
+    "input": "i need to calm down",
+    "output": "You're not alone with i need to calm down. Let's try trying a 5-minute meditation together. What do you think?"
+  },
+  {
+    "input": "i'm having trouble with motivation",
+    "output": "I'm so sorry you're feeling . How about calling a friend to ease your mind?"
+  },
+  {
+    "input": "i'm so lonely",
+    "output": "I'm so sorry you're feeling lonely. How about trying a 5-minute meditation to ease your mind?"
+  },
+  {
+    "input": "i feel like stuck",
+    "output": "I hear you, i feel like stuck can be tough. Try having a cup of tea to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "why do i feel calm?",
+    "output": "It's okay to feel calm. listening to calming music can help you find some calm. I'm here."
+  },
+  {
+    "input": "what do i do about family?",
+    "output": "what do i do about family? sounds heavy. calling a friend might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i'm feeling thankful",
+    "output": "You're not alone with i'm feeling thankful. Let's try trying a 5-minute meditation together. What do you think?"
+  },
+  {
+    "input": "i'm proud today",
+    "output": "i'm proud today sounds heavy. taking a few deep breaths might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i'm sad today",
+    "output": "I'm glad you shared i'm sad today! Let's stretching for a bit to keep that positive vibe going."
+  },
+  {
+    "input": "i'm feeling overwhelmed",
+    "output": "It's okay to feel overwhelmed. having a cup of tea can help you find some calm. I'm here."
+  },
+  {
+    "input": "i'm scared today",
+    "output": "i'm scared today sounds heavy. having a cup of tea might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i'm happy about life",
+    "output": "I hear you, i'm happy about life can be tough. Try going for a short walk to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i'm feeling excited",
+    "output": "i'm feeling excited sounds heavy. listening to calming music might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "why do i feel happy?",
+    "output": "I'm glad you shared why do i feel happy?! Let's going for a short walk to keep that positive vibe going."
+  },
+  {
+    "input": "i want to feel scared",
+    "output": "i want to feel scared sounds heavy. listening to calming music might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i'm so angry",
+    "output": "i'm so angry sounds heavy. calling a friend might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i'm struggling with focus",
+    "output": "You're not alone with i'm struggling with focus. Let's try trying a 5-minute meditation together. What do you think?"
+  },
+  {
+    "input": "why do i feel stressed?",
+    "output": "why do i feel stressed? sounds heavy. calling a friend might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i'm struggling with finances",
+    "output": "I hear you, i'm struggling with finances can be tough. Try stretching for a bit to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i need help with sadness",
+    "output": "It's okay to feel sad. calling a friend can help you find some calm. I'm here."
+  },
+  {
+    "input": "i'm empty today",
+    "output": "i'm empty today sounds heavy. writing down your thoughts might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i'm thankful today",
+    "output": "It's okay to feel thankful. trying a 5-minute meditation can help you find some calm. I'm here."
+  },
+  {
+    "input": "i want to feel calm",
+    "output": "I'm glad you shared i want to feel calm! Let's writing down your thoughts to keep that positive vibe going."
+  },
+  {
+    "input": "i need to breathe",
+    "output": "i need to breathe sounds heavy. trying a 5-minute meditation might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i'm so thankful",
+    "output": "I'm glad you shared i'm so thankful! Let's listening to calming music to keep that positive vibe going."
+  },
+  {
+    "input": "why do i feel empty?",
+    "output": "I'm glad you shared why do i feel empty?! Let's trying a 5-minute meditation to keep that positive vibe going."
+  },
+  {
+    "input": "why do i feel frustrated?",
+    "output": "It's okay to feel frustrated. listing one thing you're grateful for can help you find some calm. I'm here."
+  },
+  {
+    "input": "i want to feel happy",
+    "output": "I'm so sorry you're feeling happy. How about listening to calming music to ease your mind?"
+  },
+  {
+    "input": "i'm feeling scared",
+    "output": "I'm glad you shared i'm feeling scared! Let's stretching for a bit to keep that positive vibe going."
+  },
+  {
+    "input": "i'm struggling with friends",
+    "output": "I hear you, i'm struggling with friends can be tough. Try writing down your thoughts to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i want to feel exhausted",
+    "output": "I'm so sorry you're feeling exhausted. How about having a cup of tea to ease your mind?"
+  },
+  {
+    "input": "i need help with finances",
+    "output": "It's okay to feel . stretching for a bit can help you find some calm. I'm here."
+  },
+  {
+    "input": "i'm struggling with stress",
+    "output": "I'm glad you shared i'm struggling with stress! Let's going for a short walk to keep that positive vibe going."
+  },
+  {
+    "input": "i'm feeling angry",
+    "output": "i'm feeling angry sounds heavy. going for a short walk might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i feel like exhausted",
+    "output": "I'm so sorry you're feeling exhausted. How about going for a short walk to ease your mind?"
+  },
+  {
+    "input": "can we breathe?",
+    "output": "can we breathe? sounds heavy. writing down your thoughts might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i want to feel lost",
+    "output": "I hear you, i want to feel lost can be tough. Try writing down your thoughts to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "my mind is tough",
+    "output": "You're not alone with my mind is tough. Let's try going for a short walk together. What do you think?"
+  },
+  {
+    "input": "i'm having trouble with family",
+    "output": "It's okay to feel . going for a short walk can help you find some calm. I'm here."
+  },
+  {
+    "input": "my mood is tough",
+    "output": "I hear you, my mood is tough can be tough. Try going for a short walk to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i feel like lonely",
+    "output": "I hear you, i feel like lonely can be tough. Try calling a friend to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "can we find peace?",
+    "output": "I'm glad you shared can we find peace?! Let's writing down your thoughts to keep that positive vibe going."
+  },
+  {
+    "input": "i need to find peace",
+    "output": "It's okay to feel . having a cup of tea can help you find some calm. I'm here."
+  },
+  {
+    "input": "can you help me sort things out?",
+    "output": "I hear you, can you help me sort things out? can be tough. Try calling a friend to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i'm having trouble with friends",
+    "output": "You're not alone with i'm having trouble with friends. Let's try writing down your thoughts together. What do you think?"
+  },
+  {
+    "input": "i'm so anxious",
+    "output": "I hear you, i'm so anxious can be tough. Try stretching for a bit to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "what do i do about stress?",
+    "output": "It's okay to feel . calling a friend can help you find some calm. I'm here."
+  },
+  {
+    "input": "can you help me calm down?",
+    "output": "It's okay to feel calm. writing down your thoughts can help you find some calm. I'm here."
+  },
+  {
+    "input": "i want to feel thankful",
+    "output": "You're not alone with i want to feel thankful. Let's try having a cup of tea together. What do you think?"
+  },
+  {
+    "input": "can we feel better?",
+    "output": "I hear you, can we feel better? can be tough. Try taking a few deep breaths to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "can you help me stay positive?",
+    "output": "I'm glad you shared can you help me stay positive?! Let's listing one thing you're grateful for to keep that positive vibe going."
+  },
+  {
+    "input": "i'm depressed today",
+    "output": "I'm so sorry you're feeling depressed. How about listing one thing you're grateful for to ease your mind?"
+  },
+  {
+    "input": "i want to feel anxious",
+    "output": "I'm so sorry you're feeling anxious. How about going for a short walk to ease your mind?"
+  },
+  {
+    "input": "what do i do about work?",
+    "output": "I'm glad you shared what do i do about work?! Let's taking a few deep breaths to keep that positive vibe going."
+  },
+  {
+    "input": "i need help with money",
+    "output": "I'm glad you shared i need help with money! Let's listening to calming music to keep that positive vibe going."
+  },
+  {
+    "input": "i'm happy about today",
+    "output": "You're not alone with i'm happy about today. Let's try trying a 5-minute meditation together. What do you think?"
+  },
+  {
+    "input": "i want to feel grateful",
+    "output": "i want to feel grateful sounds heavy. listening to calming music might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "why do i feel tired?",
+    "output": "It's okay to feel tired. listing one thing you're grateful for can help you find some calm. I'm here."
+  },
+  {
+    "input": "what do i do about sadness?",
+    "output": "It's okay to feel sad. stretching for a bit can help you find some calm. I'm here."
+  },
+  {
+    "input": "why do i feel exhausted?",
+    "output": "I'm glad you shared why do i feel exhausted?! Let's trying a 5-minute meditation to keep that positive vibe going."
+  },
+  {
+    "input": "i'm anxious today",
+    "output": "I hear you, i'm anxious today can be tough. Try writing down your thoughts to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "my job is tough",
+    "output": "You're not alone with my job is tough. Let's try listing one thing you're grateful for together. What do you think?"
+  },
+  {
+    "input": "can we vent?",
+    "output": "I'm glad you shared can we vent?! Let's listening to calming music to keep that positive vibe going."
+  },
+  {
+    "input": "i feel like frustrated",
+    "output": "You're not alone with i feel like frustrated. Let's try writing down your thoughts together. What do you think?"
+  },
+  {
+    "input": "i'm hopeful today",
+    "output": "i'm hopeful today sounds heavy. trying a 5-minute meditation might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "can you help me breathe?",
+    "output": "I'm glad you shared can you help me breathe?! Let's taking a few deep breaths to keep that positive vibe going."
+  },
+  {
+    "input": "i feel like tired",
+    "output": "You're not alone with i feel like tired. Let's try having a cup of tea together. What do you think?"
+  },
+  {
+    "input": "why do i feel overwhelmed?",
+    "output": "It's okay to feel overwhelmed. having a cup of tea can help you find some calm. I'm here."
+  },
+  {
+    "input": "what do i do about sleep?",
+    "output": "I hear you, what do i do about sleep? can be tough. Try listing one thing you're grateful for to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i feel like scared",
+    "output": "I hear you, i feel like scared can be tough. Try listing one thing you're grateful for to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i feel like peaceful",
+    "output": "I'm glad you shared i feel like peaceful! Let's listening to calming music to keep that positive vibe going."
+  },
+  {
+    "input": "i'm feeling frustrated",
+    "output": "I hear you, i'm feeling frustrated can be tough. Try calling a friend to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i'm struggling with money",
+    "output": "i'm struggling with money sounds heavy. stretching for a bit might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "why do i feel proud?",
+    "output": "why do i feel proud? sounds heavy. writing down your thoughts might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i'm struggling with anxiety",
+    "output": "i'm struggling with anxiety sounds heavy. trying a 5-minute meditation might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "what do i do about anxiety?",
+    "output": "I'm so sorry you're feeling . How about listening to calming music to ease your mind?"
+  },
+  {
+    "input": "i'm having trouble with work",
+    "output": "You're not alone with i'm having trouble with work. Let's try stretching for a bit together. What do you think?"
+  },
+  {
+    "input": "i need help with friends",
+    "output": "i need help with friends sounds heavy. stretching for a bit might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i'm struggling with work",
+    "output": "I hear you, i'm struggling with work can be tough. Try having a cup of tea to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i'm having trouble with relationships",
+    "output": "It's okay to feel . having a cup of tea can help you find some calm. I'm here."
+  },
+  {
+    "input": "i'm feeling anxious",
+    "output": "You're not alone with i'm feeling anxious. Let's try trying a 5-minute meditation together. What do you think?"
+  },
+  {
+    "input": "what do i do about friends?",
+    "output": "what do i do about friends? sounds heavy. going for a short walk might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i'm feeling tired",
+    "output": "I'm glad you shared i'm feeling tired! Let's stretching for a bit to keep that positive vibe going."
+  },
+  {
+    "input": "i need to talk",
+    "output": "I'm so sorry you're feeling . How about going for a short walk to ease your mind?"
+  },
+  {
+    "input": "i'm struggling with school",
+    "output": "I'm glad you shared i'm struggling with school! Let's writing down your thoughts to keep that positive vibe going."
+  },
+  {
+    "input": "i'm feeling happy",
+    "output": "I hear you, i'm feeling happy can be tough. Try stretching for a bit to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i need to sort things out",
+    "output": "You're not alone with i need to sort things out. Let's try trying a 5-minute meditation together. What do you think?"
+  },
+  {
+    "input": "i'm feeling hopeful",
+    "output": "I'm glad you shared i'm feeling hopeful! Let's trying a 5-minute meditation to keep that positive vibe going."
+  },
+  {
+    "input": "why do i feel scared?",
+    "output": "I'm glad you shared why do i feel scared?! Let's trying a 5-minute meditation to keep that positive vibe going."
+  },
+  {
+    "input": "can you help me vent?",
+    "output": "I'm so sorry you're feeling . How about listening to calming music to ease your mind?"
+  },
+  {
+    "input": "i'm so hopeful",
+    "output": "It's okay to feel hopeful. having a cup of tea can help you find some calm. I'm here."
+  },
+  {
+    "input": "i'm having trouble with stress",
+    "output": "I hear you, i'm having trouble with stress can be tough. Try writing down your thoughts to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i need help with motivation",
+    "output": "You're not alone with i need help with motivation. Let's try listening to calming music together. What do you think?"
+  },
+  {
+    "input": "i feel like hopeful",
+    "output": "You're not alone with i feel like hopeful. Let's try trying a 5-minute meditation together. What do you think?"
+  },
+  {
+    "input": "i'm having trouble with sadness",
+    "output": "I'm so sorry you're feeling sad. How about calling a friend to ease your mind?"
+  },
+  {
+    "input": "i feel like thankful",
+    "output": "I'm so sorry you're feeling thankful. How about listening to calming music to ease your mind?"
+  },
+  {
+    "input": "i'm struggling with relationships",
+    "output": "I hear you, i'm struggling with relationships can be tough. Try going for a short walk to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "can you help me relax?",
+    "output": "I hear you, can you help me relax? can be tough. Try stretching for a bit to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "can we sort things out?",
+    "output": "can we sort things out? sounds heavy. taking a few deep breaths might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i'm feeling proud",
+    "output": "i'm feeling proud sounds heavy. going for a short walk might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i want to feel empty",
+    "output": "I hear you, i want to feel empty can be tough. Try writing down your thoughts to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i'm feeling stuck",
+    "output": "You're not alone with i'm feeling stuck. Let's try taking a few deep breaths together. What do you think?"
+  },
+  {
+    "input": "can we focus?",
+    "output": "I'm so sorry you're feeling . How about trying a 5-minute meditation to ease your mind?"
+  },
+  {
+    "input": "i'm struggling with sleep",
+    "output": "I hear you, i'm struggling with sleep can be tough. Try stretching for a bit to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i need to unwind",
+    "output": "I'm so sorry you're feeling . How about listing one thing you're grateful for to ease your mind?"
+  },
+  {
+    "input": "i'm feeling lost",
+    "output": "i'm feeling lost sounds heavy. stretching for a bit might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "my heart is tough",
+    "output": "It's okay to feel . listening to calming music can help you find some calm. I'm here."
+  },
+  {
+    "input": "i'm peaceful today",
+    "output": "I hear you, i'm peaceful today can be tough. Try calling a friend to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i feel like calm",
+    "output": "I'm glad you shared i feel like calm! Let's trying a 5-minute meditation to keep that positive vibe going."
+  },
+  {
+    "input": "why do i feel thankful?",
+    "output": "why do i feel thankful? sounds heavy. stretching for a bit might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i need to get motivated",
+    "output": "I hear you, i need to get motivated can be tough. Try taking a few deep breaths to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i'm having trouble with money",
+    "output": "You're not alone with i'm having trouble with money. Let's try listing one thing you're grateful for together. What do you think?"
+  },
+  {
+    "input": "i want to feel stressed",
+    "output": "I hear you, i want to feel stressed can be tough. Try listing one thing you're grateful for to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i'm so stressed",
+    "output": "I'm glad you shared i'm so stressed! Let's listing one thing you're grateful for to keep that positive vibe going."
+  },
+  {
+    "input": "i feel like excited",
+    "output": "I hear you, i feel like excited can be tough. Try trying a 5-minute meditation to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i'm so proud",
+    "output": "You're not alone with i'm so proud. Let's try listening to calming music together. What do you think?"
+  },
+  {
+    "input": "i want to feel stuck",
+    "output": "i want to feel stuck sounds heavy. stretching for a bit might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i need help with anger",
+    "output": "I'm glad you shared i need help with anger! Let's having a cup of tea to keep that positive vibe going."
+  },
+  {
+    "input": "i need to stay positive",
+    "output": "It's okay to feel . stretching for a bit can help you find some calm. I'm here."
+  },
+  {
+    "input": "i'm feeling empty",
+    "output": "You're not alone with i'm feeling empty. Let's try trying a 5-minute meditation together. What do you think?"
+  },
+  {
+    "input": "i'm tired today",
+    "output": "You're not alone with i'm tired today. Let's try going for a short walk together. What do you think?"
+  },
+  {
+    "input": "can you help me unwind?",
+    "output": "I'm so sorry you're feeling . How about calling a friend to ease your mind?"
+  },
+  {
+    "input": "i'm feeling peaceful",
+    "output": "It's okay to feel peaceful. listening to calming music can help you find some calm. I'm here."
+  },
+  {
+    "input": "my future is tough",
+    "output": "I'm so sorry you're feeling . How about trying a 5-minute meditation to ease your mind?"
+  },
+  {
+    "input": "i need help with loneliness",
+    "output": "i need help with loneliness sounds heavy. calling a friend might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i feel like overwhelmed",
+    "output": "I hear you, i feel like overwhelmed can be tough. Try stretching for a bit to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i'm feeling calm",
+    "output": "I'm so sorry you're feeling calm. How about stretching for a bit to ease your mind?"
+  },
+  {
+    "input": "why do i feel peaceful?",
+    "output": "It's okay to feel peaceful. calling a friend can help you find some calm. I'm here."
+  },
+  {
+    "input": "why do i feel stuck?",
+    "output": "why do i feel stuck? sounds heavy. writing down your thoughts might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i need help with anxiety",
+    "output": "You're not alone with i need help with anxiety. Let's try having a cup of tea together. What do you think?"
+  },
+  {
+    "input": "can you help me talk?",
+    "output": "I'm so sorry you're feeling . How about calling a friend to ease your mind?"
+  },
+  {
+    "input": "why do i feel anxious?",
+    "output": "It's okay to feel anxious. calling a friend can help you find some calm. I'm here."
+  },
+  {
+    "input": "i'm feeling sad",
+    "output": "You're not alone with i'm feeling sad. Let's try listening to calming music together. What do you think?"
+  },
+  {
+    "input": "i need help with family",
+    "output": "I'm glad you shared i need help with family! Let's stretching for a bit to keep that positive vibe going."
+  },
+  {
+    "input": "i need help with stress",
+    "output": "It's okay to feel . taking a few deep breaths can help you find some calm. I'm here."
+  },
+  {
+    "input": "i'm having trouble with finances",
+    "output": "I hear you, i'm having trouble with finances can be tough. Try calling a friend to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "what do i do about school?",
+    "output": "I'm glad you shared what do i do about school?! Let's taking a few deep breaths to keep that positive vibe going."
+  },
+  {
+    "input": "i'm feeling grateful",
+    "output": "It's okay to feel grateful. going for a short walk can help you find some calm. I'm here."
+  },
+  {
+    "input": "can you help me get motivated?",
+    "output": "I'm glad you shared can you help me get motivated?! Let's listing one thing you're grateful for to keep that positive vibe going."
+  },
+  {
+    "input": "i want to feel lonely",
+    "output": "I'm glad you shared i want to feel lonely! Let's listening to calming music to keep that positive vibe going."
+  },
+  {
+    "input": "i'm so peaceful",
+    "output": "I'm so sorry you're feeling peaceful. How about taking a few deep breaths to ease your mind?"
+  },
+  {
+    "input": "i'm having trouble with sleep",
+    "output": "You're not alone with i'm having trouble with sleep. Let's try writing down your thoughts together. What do you think?"
+  },
+  {
+    "input": "i'm feeling exhausted",
+    "output": "You're not alone with i'm feeling exhausted. Let's try having a cup of tea together. What do you think?"
+  },
+  {
+    "input": "i want to feel tired",
+    "output": "i want to feel tired sounds heavy. going for a short walk might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "my day is tough",
+    "output": "I hear you, my day is tough can be tough. Try listening to calming music to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i'm feeling lonely",
+    "output": "It's okay to feel lonely. listening to calming music can help you find some calm. I'm here."
+  },
+  {
+    "input": "what do i do about relationships?",
+    "output": "I'm so sorry you're feeling . How about stretching for a bit to ease your mind?"
+  },
+  {
+    "input": "i'm struggling with family",
+    "output": "It's okay to feel . taking a few deep breaths can help you find some calm. I'm here."
+  },
+  {
+    "input": "i need help with work",
+    "output": "i need help with work sounds heavy. taking a few deep breaths might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i'm having trouble with school",
+    "output": "You're not alone with i'm having trouble with school. Let's try stretching for a bit together. What do you think?"
+  },
+  {
+    "input": "i want to feel hopeful",
+    "output": "I'm so sorry you're feeling hopeful. How about writing down your thoughts to ease your mind?"
+  },
+  {
+    "input": "i'm so lost",
+    "output": "It's okay to feel lost. trying a 5-minute meditation can help you find some calm. I'm here."
+  },
+  {
+    "input": "can we unwind?",
+    "output": "I'm glad you shared can we unwind?! Let's calling a friend to keep that positive vibe going."
+  },
+  {
+    "input": "i feel like sad",
+    "output": "I hear you, i feel like sad can be tough. Try taking a few deep breaths to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i'm stuck today",
+    "output": "i'm stuck today sounds heavy. having a cup of tea might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i feel like angry",
+    "output": "You're not alone with i feel like angry. Let's try stretching for a bit together. What do you think?"
+  },
+  {
+    "input": "i feel like stressed",
+    "output": "You're not alone with i feel like stressed. Let's try calling a friend together. What do you think?"
+  },
+  {
+    "input": "i'm struggling with anger",
+    "output": "I'm glad you shared i'm struggling with anger! Let's going for a short walk to keep that positive vibe going."
+  },
+  {
+    "input": "i'm struggling with sadness",
+    "output": "I hear you, i'm struggling with sadness can be tough. Try writing down your thoughts to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "i want to feel proud",
+    "output": "I'm so sorry you're feeling proud. How about stretching for a bit to ease your mind?"
+  },
+  {
+    "input": "i'm lost today",
+    "output": "You're not alone with i'm lost today. Let's try calling a friend together. What do you think?"
+  },
+  {
+    "input": "i'm so stuck",
+    "output": "It's okay to feel stuck. listing one thing you're grateful for can help you find some calm. I'm here."
+  },
+  {
+    "input": "i'm overwhelmed today",
+    "output": "i'm overwhelmed today sounds heavy. taking a few deep breaths might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i feel like proud",
+    "output": "I hear you, i feel like proud can be tough. Try listing one thing you're grateful for to lift your spirits. I'm here for you."
+  },
+  {
+    "input": "why do i feel hopeful?",
+    "output": "why do i feel hopeful? sounds heavy. calling a friend might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "why do i feel lonely?",
+    "output": "You're not alone with why do i feel lonely?. Let's try writing down your thoughts together. What do you think?"
+  },
+  {
+    "input": "i need help with school",
+    "output": "i need help with school sounds heavy. listing one thing you're grateful for might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i'm angry today",
+    "output": "i'm angry today sounds heavy. listing one thing you're grateful for might help you feel a bit lighter. I'm cheering you on."
+  },
+  {
+    "input": "i feel like nervous",
+    "output": "I'm so sorry you're feeling nervous. How about writing down your thoughts to ease your mind?"
+  },
+  {
+    "input": "why do i feel sad?",
+    "output": "It's okay to feel sad. listing one thing you're grateful for can help you find some calm. I'm here."
+  },
+  {
+    "input": "what do i do about finances?",
+    "output": "You're not alone with what do i do about finances?. Let's try stretching for a bit together. What do you think?"
+  }
+]

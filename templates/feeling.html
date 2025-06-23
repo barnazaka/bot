@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CalmBot - Emotion Check-In</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='image.png') }}">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    :root {
+      --accent-color: #2dd4bf;
+      --text-dark: #1a1a3b;
+      --text-light: #f8fafc;
+      --shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+    .emotion-btn.selected {
+      color: white !important;
+    }
+    .emotion-btn[disabled] {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+    .spinner {
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top: 4px solid #2dd4bf;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-purple-50 to-white min-h-screen flex flex-col">
+  <div class="pt-20"></div>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full bg-white shadow p-4 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="text-2xl font-bold">🌱 CalmBot</div>
+      <div class="hidden md:flex space-x-6">
+        <a href="/" class="text-gray-700 hover:text-green-600">Home</a>
+        <a href="/about" class="text-gray-700 hover:text-green-600">About</a>
+        <a href="/support" class="text-gray-700 hover:text-green-600">Contact</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-3xl focus:outline-none">☰</button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2 px-4">
+      <a href="/" class="block text-gray-700 hover:text-green-600">Home</a>
+      <a href="/about" class="block text-gray-700 hover:text-green-600">About</a>
+      <a href="/support" class="block text-gray-700 hover:text-green-600">Contact</a>
+    </div>
+  </nav>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Main Emotion Picker Section -->
+  <main class="flex-1 flex items-center justify-center p-6">
+    <div class="bg-white rounded-2xl shadow-lg max-w-2xl w-full overflow-hidden">
+      <div class="bg-gradient-to-r from-purple-600 to-indigo-500 text-white p-6 text-center">
+        <h1 class="text-2xl font-bold mb-1">How are you feeling today?</h1>
+        <p class="text-sm opacity-90">Understanding your emotions is the first step towards mindfulness with CalmBot</p>
+      </div>
+
+      <div class="p-8 text-center">
+        <a href="/" class="mb-4 text-purple-600 hover:underline font-medium inline-block">Back to Start</a>
+
+        <p class="mb-6 text-gray-600">Select the emotion that best describes how you're feeling right now:</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+          <!-- Happy -->
+          <button id="happiness-btn" class="emotion-btn border-2 border-green-400 rounded-lg p-4 hover:bg-green-50 cursor-pointer">
+            <div class="text-green-500 text-3xl mb-2">😊</div>
+            <h3 class="font-semibold text-lg text-green-700">Happy</h3>
+            <p class="text-sm text-gray-600">Feeling joyful and content</p>
+          </button>
+
+          <!-- Sad -->
+          <button id="sadness-btn" class="emotion-btn border-2 border-blue-400 rounded-lg p-4 hover:bg-blue-50 cursor-pointer">
+            <div class="text-blue-500 text-3xl mb-2">😔</div>
+            <h3 class="font-semibold text-lg text-blue-700">Sad</h3>
+            <p class="text-sm text-gray-600">Feeling down or blue</p>
+          </button>
+
+          <!-- Angry -->
+          <button id="anger-btn" class="emotion-btn border-2 border-red-400 rounded-lg p-4 hover:bg-red-50 cursor-pointer">
+            <div class="text-red-500 text-3xl mb-2">😡</div>
+            <h3 class="font-semibold text-lg text-red-700">Angry</h3>
+            <p class="text-sm text-gray-600">Feeling frustrated or irritated</p>
+          </button>
+
+          <!-- Anxious -->
+          <button id="anxiety-btn" class="emotion-btn border-2 border-yellow-400 rounded-lg p-4 hover:bg-yellow-50 cursor-pointer">
+            <div class="text-yellow-500 text-3xl mb-2">😟</div>
+            <h3 class="font-semibold text-lg text-yellow-700">Anxious</h3>
+            <p class="text-sm text-gray-600">Feeling worried or nervous</p>
+          </button>
+        </div>
+      </div>
+
+      <!-- Bottom Navigation -->
+      <div class="flex items-center justify-between px-6 py-4 border-t text-gray-500 text-sm">
+        <a href="/" class="hover:underline">← Back</a>
+        <div class="flex gap-2">
+          <span class="h-2 w-2 rounded-full bg-purple-500"></span>
+          <span class="h-2 w-2 rounded-full bg-gray-300"></span>
+          <span class="h-2 w-2 rounded-full bg-gray-300"></span>
+        </div>
+        <button id="continue-btn" class="text-purple-600 hover:underline font-medium">Continue →</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Alert Modal for No Emotion Selected -->
+  <div id="alertModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg p-8 max-w-sm w-full text-center shadow-lg">
+      <h3 class="text-xl font-bold text-purple-700 mb-4">Please Select an Emotion</h3>
+      <p class="text-gray-600 mb-6">Choose how you're feeling before continuing.</p>
+      <button onclick="closeAlertModal()" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-500 transition">Okay</button>
+    </div>
+  </div>
+
+  <!-- Loading Modal -->
+  <div id="loadingModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg p-8 max-w-sm w-full text-center shadow-lg">
+      <div class="spinner mb-4"></div>
+      <h3 class="text-xl font-bold text-purple-700 mb-2">Processing Your Emotion</h3>
+      <p class="text-gray-600">We're analyzing how you feel...</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t p-4 flex justify-between items-center text-sm text-gray-500">
+    <p>© 2025 CalmBot. All rights reserved. Barnazaka_designed</p>
+    <div class="flex gap-4">
+      <a href="#" class="hover:text-gray-700">🐦</a>
+      <a href="#" class="hover:text-gray-700">📸</a>
+      <a href="#" class="hover:text-gray-700">▶️</a>
+    </div>
+  </footer>
+
+  <script>
+    const userId = '123';
+    let selectedButton = null;
+
+    async function logEmotion(emotion) {
+      try {
+        const response = await fetch(`/mood/${emotion}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ user_id: userId })
+        });
+        if (!response.ok) {
+          throw new Error('Failed to log emotion');
+        }
+      } catch (error) {
+        console.error('Error logging emotion:', error);
+        closeLoadingModal();
+        showAlertModal();
+        throw error;
+      }
+    }
+
+    function showAlertModal() {
+      document.getElementById('alertModal').classList.remove('hidden');
+    }
+
+    function closeAlertModal() {
+      document.getElementById('alertModal').classList.add('hidden');
+    }
+
+    function showLoadingModal() {
+      document.getElementById('loadingModal').classList.remove('hidden');
+    }
+
+    function closeLoadingModal() {
+      document.getElementById('loadingModal').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.emotion-btn').forEach(button => {
+      button.addEventListener('click', async () => {
+        if (selectedButton === button) {
+          selectedButton.classList.remove('selected');
+          selectedButton.style.backgroundColor = '';
+          selectedButton.removeAttribute('disabled');
+          selectedButton = null;
+          document.querySelectorAll('.emotion-btn').forEach(btn => btn.removeAttribute('disabled'));
+        } else {
+          if (selectedButton) {
+            selectedButton.classList.remove('selected');
+            selectedButton.style.backgroundColor = '';
+            selectedButton.removeAttribute('disabled');
+          }
+          selectedButton = button;
+          const emotion = selectedButton.id.replace('-btn', '');
+          let color = '';
+          switch (emotion) {
+            case 'happiness': color = '#10b981'; break;
+            case 'sadness': color = '#3b82f6'; break;
+            case 'anger': color = '#ef4444'; break;
+            case 'anxiety': color = '#facc15'; break;
+          }
+          selectedButton.classList.add('selected');
+          selectedButton.style.backgroundColor = color;
+          document.querySelectorAll('.emotion-btn').forEach(btn => {
+            if (btn !== selectedButton) btn.setAttribute('disabled', 'disabled');
+          });
+          try {
+            await logEmotion(emotion);
+          } catch (error) {
+            selectedButton.classList.remove('selected');
+            selectedButton.style.backgroundColor = '';
+            selectedButton.removeAttribute('disabled');
+            selectedButton = null;
+            document.querySelectorAll('.emotion-btn').forEach(btn => btn.removeAttribute('disabled'));
+          }
+        }
+      });
+    });
+
+    document.getElementById('continue-btn').addEventListener('click', async () => {
+      if (selectedButton) {
+        const emotion = selectedButton.id.replace('-btn', '');
+        try {
+          showLoadingModal();
+          await logEmotion(emotion);
+          localStorage.setItem('selectedEmotion', emotion);
+          window.location.href = '/feeling1';
+        } catch (error) {
+          // Error handled in logEmotion
+        }
+      } else {
+        showAlertModal();
+      }
+    });
+  </script>
+</body>
+</html>

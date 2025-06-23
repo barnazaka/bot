@@ -1,0 +1,1048 @@
+[
+  {
+    "user_id": 6674839665,
+    "timestamp": "194880.015",
+    "input": "alot"
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "194894.656",
+    "input": "i said alot is going on my mind"
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "194944.89",
+    "input": "im good"
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "195054.812",
+    "input": "i feel angry"
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "196042.156",
+    "input": "im good",
+    "is_followup": false
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "196053.625",
+    "input": "meaning i feel alright",
+    "is_followup": true
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "196061.218",
+    "input": "im good",
+    "is_followup": false
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "196080.328",
+    "input": "meaning i feel alright",
+    "is_followup": true
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "196155.812",
+    "input": "i'm good now",
+    "is_followup": false
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "196167.406",
+    "input": "meaning i feel good now",
+    "is_followup": true
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "196323.734",
+    "input": "im good now",
+    "is_followup": false
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "196733.875",
+    "input": "im good",
+    "is_followup": false
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "196768.703",
+    "input": "im good",
+    "is_followup": true
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "196775.375",
+    "input": "im good",
+    "is_followup": false
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "196805.0",
+    "input": "im good",
+    "is_followup": false
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "196973.703",
+    "input": "life",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748276445.8620234",
+    "input": "financial",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748276455.5509899",
+    "input": "means i dont have money",
+    "is_followup": true
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748276867.5348868",
+    "input": "problems",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748276882.0966687",
+    "input": "my financial life",
+    "is_followup": true
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748276887.661429",
+    "input": "my financial life",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748276892.9166067",
+    "input": "my financial life is in ruins",
+    "is_followup": true
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748276899.6335914",
+    "input": "my financial life is in ruins",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748276903.2405784",
+    "input": "my financial life is in ruins",
+    "is_followup": true
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748276905.857953",
+    "input": "my financial life is in ruin",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748277014.6665328",
+    "input": "my financial life is in ruins",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748277022.0441296",
+    "input": "my financial life is in ruin",
+    "is_followup": true
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748277025.5856912",
+    "input": "my financial life is in ruin",
+    "is_followup": false
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "199110.75",
+    "input": "alot",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748277759.81906",
+    "input": "good",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748277763.3473952",
+    "input": "good",
+    "is_followup": true
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748277784.059338",
+    "input": "yep",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748277795.7733352",
+    "input": "alo",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748277797.375809",
+    "input": "alot",
+    "is_followup": true
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748277801.9823165",
+    "input": "alot",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748277804.2401772",
+    "input": "alot",
+    "is_followup": true
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748277807.5589604",
+    "input": "im sad",
+    "is_followup": false
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "200273.937",
+    "input": "good",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748288081.2098336",
+    "input": "goood",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748288095.3429694",
+    "input": "how far",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748288098.349563",
+    "input": "how far",
+    "is_followup": true
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748288108.0207458",
+    "input": "how far",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748288773.0995328",
+    "input": "how far",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748288780.6754074",
+    "input": "i mean how are you doing?",
+    "is_followup": true
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748288920.553568",
+    "input": "how far",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748289473.8533137",
+    "input": "how far",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748289482.2839067",
+    "input": "means im good",
+    "is_followup": true
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748289487.0708003",
+    "input": "how far",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290121.411656",
+    "input": "how far",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290126.0370216",
+    "input": "means good",
+    "is_followup": true,
+    "original_input": "how far"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290141.9517078",
+    "input": "im doing great now",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290151.9389434",
+    "input": "meaning im fine and good",
+    "is_followup": true,
+    "original_input": "im doing great now"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290156.5602734",
+    "input": "im doing great",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290169.4086764",
+    "input": "means im good",
+    "is_followup": true,
+    "original_input": "im doing great"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290187.8391764",
+    "input": "life is hard",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290225.792029",
+    "input": "yeah, life really can feel heavy sometimes. when it gets like this, try focusing on just one small thing you can do today—like drinking water, stepping outside, or taking a deep breath. you don’t have to fix everything at once. if you’d like more support.",
+    "is_followup": true,
+    "original_input": "life is hard"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290259.9024005",
+    "input": "just wanna chile",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290298.4906602",
+    "input": "totally get that. it’s okay to take a break and just breathe. let yourself rest—you’ve earned it.",
+    "is_followup": true,
+    "original_input": "just wanna chile"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290315.481841",
+    "input": "just wanna chill",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290318.4001756",
+    "input": "totally get that. it’s okay to take a break and just breathe. let yourself rest—you’ve earned it.",
+    "is_followup": true,
+    "original_input": "just wanna chill"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290332.2231426",
+    "input": "i just want to chill",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290333.4552922",
+    "input": "totally get that. it’s okay to take a break and just breathe. let yourself rest—you’ve earned it.",
+    "is_followup": true,
+    "original_input": "i just want to chill"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290369.0387309",
+    "input": "im going through trauma from the past war",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290418.8298812",
+    "input": "that sounds incredibly heavy, and i want you to know your pain is valid. trauma from something as intense as war doesn’t just disappear with time — it leaves deep marks on the mind and body. some days may feel okay, and others may suddenly bring everything back like it just happened. when those waves hit, try grounding yourself in the present: feel your feet on the floor, your breath in your chest, your hands resting where they are. you are safe right now. it might help to gently write out what memories keep returning or what your body is trying to tell you. you don’t need to go through this alone — even small steps toward healing count. if you're open to it, we can take one together.",
+    "is_followup": true,
+    "original_input": "im going through trauma from the past war"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290588.9976928",
+    "input": "i keep getting angry over small things and i don't even know why.",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290600.0480604",
+    "input": "that reaction might be carrying the weight of something deeper. sometimes anger is how our wounds ask for attention—especially if they've been ignored for a long time. it could be pain from earlier in life trying to protect you in the only way it knows how. you're not broken. you're responding from a place that once needed defense. want to try a calm reflection exercise to uncover what might be underneath that anger?",
+    "is_followup": true,
+    "original_input": "i keep getting angry over small things and i don't even know why."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290601.930838",
+    "input": "yep",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290627.2792888",
+    "input": "i feel like i’m always running from something, but i don’t know what.",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290636.3932395",
+    "input": "that feeling of running can come from past pain that never had space to heal. when we carry unresolved trauma, our nervous system stays alert — always ready to protect us, even when we don’t need it anymore. you’re safe now. if you want, i can guide you through a simple grounding exercise to help you feel more present. just say 'yep'.",
+    "is_followup": true,
+    "original_input": "i feel like i’m always running from something, but i don’t know what."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290645.591121",
+    "input": "i don’t feel anything anymore. just numb.",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290659.900924",
+    "input": "numbness is a quiet kind of pain. it often means you’ve had to shut down just to survive. that’s not weakness — that’s how strong you had to be. but you deserve to feel alive again, slowly and safely. if you’re ready, we can take a small step together.",
+    "is_followup": true,
+    "original_input": "i don’t feel anything anymore. just numb."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290668.1103303",
+    "input": "i keep repeating the same patterns in my relationships.",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290680.135975",
+    "input": "patterns often come from old wounds — especially ones formed in childhood. if love once felt unsafe or unpredictable, your heart may still be trying to protect you. the good news is, those patterns aren’t fixed. you can break them with awareness and care. want to explore that a bit?",
+    "is_followup": true,
+    "original_input": "i keep repeating the same patterns in my relationships."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290689.4964874",
+    "input": "sometimes i feel like something is wrong with me.",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290713.022419",
+    "input": "there’s nothing wrong with you — but something might have happened to you. trauma has a way of making us question our worth. but your worth has never changed. you are still whole. i’m here to help you remember that.",
+    "is_followup": true,
+    "original_input": "sometimes i feel like something is wrong with me."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290720.084211",
+    "input": "i’m tired of pretending i’m okay.",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290731.9339802",
+    "input": "that’s a powerful truth to say out loud. pretending takes energy, especially when you’re hurting inside. you deserve spaces where you don’t have to wear a mask. this is one of them. i see you. if you’d like, i can help you sit with the real you — gently.",
+    "is_followup": true,
+    "original_input": "i’m tired of pretending i’m okay."
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290799.436709",
+    "input": "i’m tired of pretending i’m okay",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290806.8145833",
+    "input": "that’s a powerful truth to say out loud. pretending takes energy, especially when you’re hurting inside. you deserve spaces where you don’t have to wear a mask. this is one of them. i see you. if you’d like, i can help you sit with the real you — gently",
+    "is_followup": true,
+    "original_input": "i’m tired of pretending i’m okay"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290970.2146966",
+    "input": "tired",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290976.6061828",
+    "input": "rest isn’t weakness. your body might be asking for gentleness. try placing your hand on your chest and just breathe for a few seconds.",
+    "is_followup": true,
+    "original_input": "tired"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290984.1164837",
+    "input": "numb",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748290993.0840607",
+    "input": "feeling nothing is a sign your heart has been carrying too much. you’re not alone. let’s sit in silence together for a moment—breathe with me.",
+    "is_followup": true,
+    "original_input": "numb"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291000.6530302",
+    "input": "low",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291007.3774855",
+    "input": "when your energy is low, try doing just one kind thing for yourself today. even drinking water counts. small care is still care.",
+    "is_followup": true,
+    "original_input": "low"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291014.4443302",
+    "input": "alone",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291026.9501598",
+    "input": "ou may feel alone, but you're not invisible. i'm here, and i see you. want a calming thought to hold onto?",
+    "is_followup": true,
+    "original_input": "alone"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291035.3167741",
+    "input": "empty",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291042.6234062",
+    "input": "that emptiness might be protecting you from overwhelm. let’s gently invite a little light in. you deserve to feel safe and full again.",
+    "is_followup": true,
+    "original_input": "empty"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291050.008457",
+    "input": "meh",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291061.921833",
+    "input": "even “meh” has meaning. not every day has to be a breakthrough. just being here right now means something is already healing.",
+    "is_followup": true,
+    "original_input": "meh"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291070.3749964",
+    "input": "lost",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291076.4913533",
+    "input": "feeling lost doesn’t mean you have no path. it just means the map isn’t clear yet. let’s pause and listen together for the next step.",
+    "is_followup": true,
+    "original_input": "lost"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291084.1947699",
+    "input": "broken",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291092.0767896",
+    "input": "you’re not broken. you’re healing. sometimes it just takes a while for the cracks to show us the light.",
+    "is_followup": true,
+    "original_input": "broken"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291129.8557909",
+    "input": "feel better",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291139.0616722",
+    "input": "let’s begin slowly. close your eyes and take one deep breath. peace starts in small moments like this.",
+    "is_followup": true,
+    "original_input": "feel better"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291145.4019852",
+    "input": "help me",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291151.9163218",
+    "input": "i'm here with you. whatever you're carrying, you don’t have to hold it all at once. let’s take it one breath at a time.",
+    "is_followup": true,
+    "original_input": "help me"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291160.687591",
+    "input": "so heavy",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291167.2828019",
+    "input": "that weight you feel is real. you don’t have to explain it—just know that it’s okay to rest from carrying it.",
+    "is_followup": true,
+    "original_input": "so heavy"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291173.3345165",
+    "input": "not okay",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291180.3216965",
+    "input": "it’s brave to admit that. being “not okay” is part of healing. let’s gently hold space for whatever you feel.",
+    "is_followup": true,
+    "original_input": "not okay"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291187.731209",
+    "input": "need peace",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291193.1864457",
+    "input": "let’s slow everything down. breathe in through your nose… and out. you’re creating a small pocket of peace right now.",
+    "is_followup": true,
+    "original_input": "need peace"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291215.1095634",
+    "input": "quiet mind",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291222.1115417",
+    "input": "let’s quiet the noise together. try noticing five things around you. you’re here, you’re safe, and you’re not alone.",
+    "is_followup": true,
+    "original_input": "quiet mind"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291229.5274282",
+    "input": "quite mind",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291244.6112945",
+    "input": "let’s quiet the noise together. try noticing five things around you. you’re here, you’re safe, and you’re not alone.",
+    "is_followup": true,
+    "original_input": "quite mind"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291283.9772341",
+    "input": "i need help",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291304.7917898",
+    "input": "i'm here with you. whatever you're carrying, you don’t have to hold it all at once. let’s take it one breath at a time.",
+    "is_followup": true,
+    "original_input": "i need help"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291323.6943269",
+    "input": "so many things",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291388.6795912",
+    "input": "sounds like your heart is carrying more than it can hold right now. let’s untangle one feeling at a time — no rush",
+    "is_followup": true,
+    "original_input": "so many things"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291397.2092793",
+    "input": "just feel stuck",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291404.9678957",
+    "input": "feeling stuck is okay — it means something inside you is asking to be heard. let’s sit with that feeling for a moment, without judgment.",
+    "is_followup": true,
+    "original_input": "just feel stuck"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291421.0901005",
+    "input": "feel stuck",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291422.9606137",
+    "input": "feeling stuck is okay — it means something inside you is asking to be heard. let’s sit with that feeling for a moment, without judgment.",
+    "is_followup": true,
+    "original_input": "feel stuck"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291431.2138083",
+    "input": "can't explain",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291437.708676",
+    "input": "you don’t have to explain it perfectly. some pain lives beyond words. i’m still here, and we can be quiet together if that helps.",
+    "is_followup": true,
+    "original_input": "can't explain"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291443.2541628",
+    "input": "i cant explain",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291444.493771",
+    "input": "you don’t have to explain it perfectly. some pain lives beyond words. i’m still here, and we can be quiet together if that helps.",
+    "is_followup": true,
+    "original_input": "i cant explain"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291448.84528",
+    "input": "cant explain",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291450.2869487",
+    "input": "you don’t have to explain it perfectly. some pain lives beyond words. i’m still here, and we can be quiet together if that helps.",
+    "is_followup": true,
+    "original_input": "cant explain"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291593.8526192",
+    "input": "but how",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291671.5282931",
+    "input": "a good place to start is with just one line. it can be as simple as “i feel…” or “today was…” no need to write a story — just what’s on your mind or heart right now.",
+    "is_followup": true,
+    "original_input": "but how"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291798.2001312",
+    "input": "okay go on",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291800.0865254",
+    "input": "a good place to start is with just one line. it can be as simple as “i feel…” or “today was…” you don’t need to write a story, just what’s on your mind or heart right now. you could also try describing a place where you feel safe or naming a small thing that made you smile recently. even writing down a question you have for yourself can open new paths. the important part is to be gentle and honest with yourself and not worry about getting it right.",
+    "is_followup": true,
+    "original_input": "okay go on"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291830.4209406",
+    "input": "i don’t feel safe",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291840.3288414",
+    "input": "feeling unsafe can be really heavy. maybe start your journal by writing about a place or moment where you felt even a little calm or peace. it could help remind you that safety is possible.",
+    "is_followup": true,
+    "original_input": "i don’t feel safe"
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291847.6167045",
+    "input": "i can’t calm down",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748291853.8848598",
+    "input": "when calming feels hard, try focusing on your breath. breathe in slowly for four seconds, hold for four, then breathe out for four. repeat a few times and see if that helps.",
+    "is_followup": true,
+    "original_input": "i can’t calm down"
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "213974.156",
+    "input": "alot",
+    "is_followup": false
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "213981.906",
+    "input": "meaning alot",
+    "is_followup": true
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "213987.406",
+    "input": "alot",
+    "is_followup": false
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "214012.14",
+    "input": "im tired",
+    "is_followup": false
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "214017.328",
+    "input": "tired",
+    "is_followup": true
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "214026.515",
+    "input": "help me",
+    "is_followup": false
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748292324.9596484",
+    "input": "hello there",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748292334.893011",
+    "input": "hello there",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 123,
+    "timestamp": "1748292354.1183548",
+    "input": "im sad",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": "123",
+    "timestamp": "1748344668.3451233",
+    "input": "im feeling sad",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": "123",
+    "timestamp": "1748344678.3111806",
+    "input": "im sad",
+    "is_followup": true,
+    "original_input": "im feeling sad"
+  },
+  {
+    "user_id": "123",
+    "timestamp": "1748344693.6588783",
+    "input": "help me",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": "123",
+    "timestamp": "1748344702.4921815",
+    "input": "need him",
+    "is_followup": true,
+    "original_input": "help me"
+  },
+  {
+    "user_id": "123",
+    "timestamp": "1748344707.2427359",
+    "input": "need help",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": "123",
+    "timestamp": "1748344744.0829027",
+    "input": "i don’t feel safe",
+    "is_followup": true,
+    "original_input": "need help"
+  },
+  {
+    "user_id": "123",
+    "timestamp": "1748344748.844445",
+    "input": "i don’t feel safe",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": "123",
+    "timestamp": "1748344777.8206854",
+    "input": "but how",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": "123",
+    "timestamp": "1748344790.064183",
+    "input": "start small. you could write just one sentence: “today, i feel…” don’t worry about getting it right — just let it out as it comes. healing isn’t a straight line.",
+    "is_followup": true,
+    "original_input": "but how"
+  },
+  {
+    "user_id": "123",
+    "timestamp": "1748360297.927479",
+    "input": "yep",
+    "is_followup": false,
+    "original_input": null
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "20013.734",
+    "input": "life is hard",
+    "is_followup": false
+  },
+  {
+    "user_id": 7977946881,
+    "timestamp": "25602.093",
+    "input": "a lot",
+    "is_followup": false
+  },
+  {
+    "user_id": 7977946881,
+    "timestamp": "29084.375",
+    "input": "yeah i am having some flashback of past trauma",
+    "is_followup": false
+  },
+  {
+    "user_id": 7977946881,
+    "timestamp": "29111.39",
+    "input": "what are the things i need to do right now that will make me feel better",
+    "is_followup": true
+  },
+  {
+    "user_id": 7977946881,
+    "timestamp": "29147.89",
+    "input": "i think mental distraction would be the right word",
+    "is_followup": false
+  },
+  {
+    "user_id": 7977946881,
+    "timestamp": "29165.843",
+    "input": "thank you!",
+    "is_followup": true
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "627643.718",
+    "input": "im sad tody",
+    "is_followup": false
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "627680.171",
+    "input": "alot really",
+    "is_followup": false
+  },
+  {
+    "user_id": 6674839665,
+    "timestamp": "627702.796",
+    "input": "okay thanks",
+    "is_followup": true
+  }
+]

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | CalmBot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='image.png') }}">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .alert {
+      display: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .alert-success {
+      background-color: #d1fae5;
+      color: #065f46;
+    }
+    .alert-error {
+      background-color: #fee2e2;
+      color: #991b1b;
+    }
+    @media (max-width: 640px) {
+      .max-w-3xl {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .text-4xl {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+      }
+      .text-2xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+      }
+      .text-lg {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+      .text-sm {
+        font-size: 0.875rem;
+      }
+      .py-12 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+      .p-6 {
+        padding: 1rem;
+      }
+      input, textarea {
+        font-size: 0.875rem;
+      }
+      button[type="submit"] {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 0.875rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <div class="pt-20"></div>
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full bg-white shadow p-4 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="text-xl font-bold sm:text-2xl">🌱 CalmBot</div>
+      <div class="hidden md:flex space-x-4 lg:space-x-6">
+        <a href="/" class="text-gray-700 hover:text-green-600 text-sm lg:text-base">Home</a>
+        <a href="/about" class="text-gray-700 hover:text-green-600 text-sm lg:text-base">About</a>
+        <a href="/support" class="text-green-600 font-semibold text-sm lg:text-base">Contact</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-2xl sm:text-3xl focus:outline-none">☰</button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2 px-4">
+      <a href="/" class="block text-gray-700 hover:text-green-600 text-sm">Home</a>
+      <a href="/about" class="block text-gray-700 hover:text-green-600 text-sm">About</a>
+      <a href="/support" class="block text-green-600 font-semibold text-sm">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Contact Hero -->
+  <section class="bg-gradient-to-b from-white to-slate-50 py-12 text-center">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Contact CalmBot</h1>
+    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+      We'd love to hear from you — whether it’s feedback, questions, or just a hello.
+    </p>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="max-w-3xl mx-auto py-12 px-6">
+    <form id="contact-form" class="space-y-6 bg-white p-6 rounded-xl shadow">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+        <input type="text" id="name" name="name" required
+          class="mt-1 w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-green-500 focus:border-green-500">
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+        <input type="email" id="email" name="email" required
+          class="mt-1 w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-green-500 focus:border-green-500">
+      </div>
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+        <textarea id="message" name="message" rows="5" required
+          class="mt-1 w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-green-500 focus:border-green-500"></textarea>
+      </div>
+      <div>
+        <button type="submit"
+          class="rounded-full bg-green-500 px-6 py-3 text-white font-medium shadow hover:bg-green-600 transition">
+          Send Message
+        </button>
+      </div>
+      <div id="form-alert" class="alert"></div>
+    </form>
+  </section>
+
+  <!-- Contact Details -->
+  <section class="max-w-3xl mx-auto pb-12 px-6">
+    <div class="bg-slate-50 p-6 rounded-lg shadow space-y-4 text-gray-700">
+      <h2 class="text-2xl font-semibold text-gray-800">Get in Touch</h2>
+      <p>Email us at: <a href="mailto:barnazaka@gmail.com"
+          class="text-green-600 hover:underline">barnazaka@gmail.com</a></p>
+      <p>Call us at: <a href="tel:+2349110125055" class="text-green-600 hover:underline">+2349110125055</a></p>
+      <p>Follow on Telegram: <a href="https://t.me/calm56bot" target="_blank"
+          class="text-green-600 hover:underline">@calm56bot</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-100 py-6 text-center text-gray-600 text-sm">
+    © 2025 CalmBot. All rights reserved. Barnazaka_designed
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    const form = document.getElementById('contact-form');
+    const alertBox = document.getElementById('form-alert');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) {
+        alertBox.className = 'alert alert-error';
+        alertBox.textContent = 'Please fill in all fields.';
+        alertBox.style.display = 'block';
+        setTimeout(() => { alertBox.style.display = 'none'; }, 3000);
+        return;
+      }
+
+      try {
+        const response = await fetch('/send_message', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, message })
+        });
+
+        const result = await response.json();
+        if (response.ok) {
+          alertBox.className = 'alert alert-success';
+          alertBox.textContent = result.message;
+          alertBox.style.display = 'block';
+          form.reset();
+          setTimeout(() => { alertBox.style.display = 'none'; }, 3000);
+        } else {
+          throw new Error(result.error);
+        }
+      } catch (error) {
+        console.error('Error sending message:', error);
+        alertBox.className = 'alert alert-error';
+        alertBox.textContent = 'Error sending message. Please try again.';
+        alertBox.style.display = 'block';
+        setTimeout(() => { alertBox.style.display = 'none'; }, 3000);
+      }
+    });
+  </script>
+</body>
+</html>

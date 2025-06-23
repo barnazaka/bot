@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emotion Tracker Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='image.png') }}">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    :root {
+      --accent-color: #2dd4bf;
+      --text-dark: #1a1a3b;
+      --text-light: #f8fafc;
+      --shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+    .action-btn {
+      background: linear-gradient(to right, var(--accent-color), #14b8a6);
+      color: var(--text-light);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .action-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+    @media (min-width: 640px) {
+      .action-btn {
+        padding: 0.25rem 1rem;
+        font-size: 0.75rem;
+      }
+    }
+    #emotion-chart {
+      width: 100% !important;
+      max-width: 100%;
+      height: auto !important;
+      min-height: 200px;
+    }
+    #emotion-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr);
+    }
+    @media (max-width: 640px) {
+      #emotion-grid {
+        font-size: 0.75rem;
+        gap: 0.5rem;
+      }
+      #emotion-grid div {
+        padding: 0.5rem;
+      }
+      #emotion-grid span {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-blue-50 min-h-screen flex flex-col">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full bg-white shadow p-4 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="text-xl font-bold sm:text-2xl">🌱 CalmBot</div>
+      <div class="hidden md:flex space-x-4 lg:space-x-6">
+        <a href="/" class="text-gray-700 hover:text-green-600 text-sm lg:text-base">Home</a>
+        <a href="/about" class="text-gray-700 hover:text-green-600 text-sm lg:text-base">About</a>
+        <a href="/support" class="text-gray-700 hover:text-green-600 text-sm lg:text-base">Contact</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-2xl sm:text-3xl focus:outline-none">☰</button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2 px-4">
+      <a href="/" class="block text-gray-700 hover:text-green-600 text-sm">Home</a>
+      <a href="/about" class="block text-gray-700 hover:text-green-600 text-sm">About</a>
+      <a href="/support" class="block text-gray-700 hover:text-green-600 text-sm">Contact</a>
+    </div>
+  </nav>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+  <div class="flex-1 max-w-6xl mx-auto p-4 sm:p-6 pt-16 sm:pt-20">
+    <div class="text-center mb-6 sm:mb-8">
+      <div class="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 bg-gradient-to-tr from-pink-500 to-purple-500 rounded-full flex items-center justify-center">
+        <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+      </div>
+      <h1 class="text-2xl sm:text-3xl font-bold text-gray-800">Emotion Tracker Dashboard</h1>
+      <p class="text-gray-500 sm:text-gray-600 mt-2 sm:mt-4 text-sm sm:text-base">Track your emotional journey and understand your feelings better with detailed insights and analytics.</p>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-xl p-4 sm:p-6">
+      <div class="flex flex-col sm:flex-row justify-between items-center mb-4 sm:mb-6">
+        <h2 class="text-base sm:text-lg font-semibold text-gray-800">Emotion Analytics</h2>
+        <span class="text-xs sm:text-sm text-gray-400">Last 30 Days</span>
+      </div>
+
+      <div id="emotion-chart" class="mb-6 sm:mb-8"></div>
+
+      <div id="emotion-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 text-white font-semibold text-center text-xs sm:text-sm mb-4 sm:mb-6">
+        <div class="bg-yellow-400 p-3 sm:p-4 rounded-xl">😊😄<br>Happiness<br><span class="text-xl sm:text-2xl font-bold" id="happiness-count">0</span></div>
+        <div class="bg-blue-500 p-3 sm:p-4 rounded-xl">😔<br>Sadness<br><span class="text-xl sm:text-2xl font-bold" id="sadness-count">0</span></div>
+        <div class="bg-red-500 p-3 sm:p-4 rounded-xl">😡😣<br>Anger<br><span class="text-xl sm:text-2xl font-bold" id="anger-count">0</span></div>
+        <div class="bg-green-500 p-3 sm:p-4 rounded-xl">😟<br>Anxiety<br><span class="text-xl sm:text-2xl font-bold" id="anxiety-count">0</span></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+        <div class="bg-white shadow rounded-xl p-3 sm:p-4 border">
+          <h3 class="font-semibold text-gray-700 mb-2 text-sm sm:text-base">Weekly Trends</h3>
+          <p class="text-xs sm:text-sm"><span class="font-medium text-gray-600">Most Happy Day:</span> <span id="most-happy-day" class="text-blue-600 font-semibold">N/A</span></p>
+          <p class="text-xs sm:text-sm"><span class="font-medium text-gray-600">Challenging Day:</span> <span id="challenging-day" class="text-red-500 font-semibold">N/A</span></p>
+          <p class="text-xs sm:text-sm"><span class="font-medium text-gray-600">Average Mood Score:</span> <span id="avg-mood-score" class="text-green-600 font-semibold">N/A</span></p>
+        </div>
+        <div class="bg-white shadow rounded-xl p-3 sm:p-4 border">
+          <h3 class="font-semibold text-gray-700 mb-2 text-sm sm:text-base">Recommendations</h3>
+          <ul id="recommendations" class="list-disc pl-4 list-inside text-gray-600 text-xs sm:text-sm">
+            <li>Try meditation when feeling anxious</li>
+            <li>Connect with friends on challenging days</li>
+            <li>Maintain your positive routines</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t p-4">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500 gap-2">
+      <p>© 2025 CalmBot. All rights reserved. Barnazaka_designed</p>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-blue-600">🐦</a>
+        <a href="#" class="hover:text-blue-600">📸</a>
+        <a href="#" class="hover:text-blue-600">▶️</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const userId = '123';
+
+    async function fetchEmotionData() {
+      try {
+        const res = await fetch('/progress', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ user_id: userId })
+        });
+        const data = await res.json();
+        return data;
+      } catch (error) {
+        console.error('Error fetching emotion data:', error);
+        return { emotions: ['happiness', 'sadness', 'anger', 'anxiety'], counts: [0, 0, 0, 0] };
+      }
+    }
+
+    function initChart(data) {
+      const existingCanvas = document.querySelector('#emotion-chart canvas');
+      if (existingCanvas) existingCanvas.remove();
+      new p5(sketch => {
+        sketch.setup = () => {
+          let canvasWidth = Math.min(800, document.getElementById('emotion-chart').offsetWidth);
+          let canvasHeight = window.innerWidth < 640 ? 200 : 300;
+          let canvas = sketch.createCanvas(canvasWidth, canvasHeight);
+          canvas.parent('emotion-chart');
+        };
+        sketch.draw = () => {
+          sketch.background(255);
+          let barWidth = sketch.width / data.emotions.length;
+          let colors = ['#f59e0b', '#3b82f6', '#ef4444', '#10b981'];
+          for (let i = 0; i < data.emotions.length; i++) {
+            sketch.fill(colors[i]);
+            let h = sketch.map(data.counts[i], 0, Math.max(...data.counts, 10), 0, sketch.height - 40);
+            sketch.rect(i * barWidth + 10, sketch.height - h, barWidth - 20, h);
+            sketch.fill(0);
+            sketch.textAlign(sketch.CENTER);
+            sketch.textSize(window.innerWidth < 640 ? 10 : 12);
+            sketch.text(data.emotions[i].charAt(0).toUpperCase() + data.emotions[i].slice(1), i * barWidth + barWidth / 2, sketch.height - 10);
+            sketch.text(data.counts[i], i * barWidth + barWidth / 2, sketch.height - h - 10);
+          }
+        };
+        sketch.windowResized = () => {
+          let canvasWidth = Math.min(800, document.getElementById('emotion-chart').offsetWidth);
+          let canvasHeight = window.innerWidth < 640 ? 200 : 300;
+          sketch.resizeCanvas(canvasWidth, canvasHeight);
+        };
+      }, 'emotion-chart');
+    }
+
+    function updateEmotionGrid(data) {
+      const emotionCounts = {
+        happiness: 0,
+        sadness: 0,
+        anger: 0,
+        anxiety: 0
+      };
+      data.emotions.forEach((emotion, index) => {
+        if (emotion in emotionCounts) {
+          emotionCounts[emotion] = data.counts[index];
+        }
+      });
+      document.getElementById('happiness-count').textContent = emotionCounts.happiness;
+      document.getElementById('sadness-count').textContent = emotionCounts.sadness;
+      document.getElementById('anger-count').textContent = emotionCounts.anger;
+      document.getElementById('anxiety-count').textContent = emotionCounts.anxiety;
+    }
+
+    function updateTrendsAndRecommendations(data) {
+      const maxCount = Math.max(...data.counts);
+      const maxIndex = data.counts.indexOf(maxCount);
+      const dominantEmotion = data.emotions[maxIndex] || 'none';
+      const totalMoods = data.counts.reduce((a, b) => a + b, 0);
+      const avgMoodScore = totalMoods > 0 ? ((data.counts[data.emotions.indexOf('happiness') || 0] * 8 + data.counts[data.emotions.indexOf('sadness') || 1] * 4 + data.counts[data.emotions.indexOf('anger') || 2] * 2 + data.counts[data.emotions.indexOf('anxiety') || 3] * 3) / totalMoods).toFixed(1) : 'N/A';
+
+      document.getElementById('most-happy-day').textContent = data.counts[data.emotions.indexOf('happiness') || 0] > 0 ? 'Friday' : 'N/A';
+      document.getElementById('challenging-day').textContent = (data.counts[data.emotions.indexOf('sadness') || 1] + data.counts[data.emotions.indexOf('anger') || 2] + data.counts[data.emotions.indexOf('anxiety') || 3]) > 0 ? 'Monday' : 'N/A';
+      document.getElementById('avg-mood-score').textContent = avgMoodScore;
+
+      const recommendations = document.getElementById('recommendations');
+      recommendations.innerHTML = '';
+      const recs = [];
+      if (dominantEmotion === 'happiness') {
+        recs.push('Keep nurturing your joyful moments with positive activities.');
+      } else if (dominantEmotion === 'sadness') {
+        recs.push('Try journaling to express and process your sadness.');
+      } else if (dominantEmotion === 'anger') {
+        recs.push('Use breathing exercises to channel your anger constructively.');
+      } else if (dominantEmotion === 'anxiety') {
+        recs.push('Practice meditation to calm your anxious thoughts.');
+      }
+      recs.push('Connect with a source of comfort, like friends or loved ones, for support.');
+      recs.push('Maintain a consistent self-care routine.');
+      recs.forEach(rec => {
+        const li = document.createElement('li');
+        li.textContent = rec;
+        recommendations.appendChild(li);
+      });
+    }
+
+    window.addEventListener('load', async () => {
+      const data = await fetchEmotionData();
+      initChart(data);
+      updateEmotionGrid(data);
+      updateTrendsAndRecommendations(data);
+    });
+  </script>
+</body>
+</html>

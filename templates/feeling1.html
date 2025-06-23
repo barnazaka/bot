@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CalmBot - Mood Reflection</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.sound.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='image.png') }}">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    :root {
+      --primary-gradient: linear-gradient(135deg, #2a2a72, #7c3aed);
+      --accent-color: #2dd4bf;
+      --highlight-color: #facc15;
+      --text-dark: #1a1a3b;
+      --text-light: #f8fafc;
+      --bg-light: rgba(255, 255, 255, 0.95);
+      --shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+    .modal.visible {
+      display: flex;
+    }
+    .modal-content {
+      background: var(--bg-light);
+      border-radius: 16px;
+      padding: 1.5rem;
+      max-width: 90%;
+      width: 100%;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+      animation: fadeIn 0.5s ease-out;
+    }
+    .breathing-circle {
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, var(--accent-color), #14b8a6);
+      border-radius: 50%;
+      animation: breathe 8s ease-in-out infinite;
+      margin: 1rem auto;
+    }
+    @media (min-width: 640px) {
+      .breathing-circle {
+        width: 120px;
+        height: 120px;
+      }
+    }
+    @keyframes breathe {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeOut {
+      from { opacity: 1; transform: translateY(0); }
+      to { opacity: 0; transform: translateY(-20px); }
+    }
+    .action-btn {
+      background: linear-gradient(to right, var(--accent-color), #14b8a6);
+      color: var(--text-light);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .action-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+    @media (min-width: 640px) {
+      .action-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+      }
+    }
+    .loading-screen {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 3000;
+    }
+    .loading-screen.visible {
+      display: flex;
+    }
+    .spinner {
+      width: 32px;
+      height: 32px;
+      border: 4px solid var(--accent-color);
+      border-top: 4px solid transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @media (min-width: 640px) {
+      .spinner {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .alert-box {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--bg-light);
+      border: 2px solid var(--accent-color);
+      border-radius: 12px;
+      padding: 1rem 2rem;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+      z-index: 4000;
+      color: var(--text-dark);
+      font-weight: 600;
+      animation: fadeIn 0.5s ease-out;
+    }
+    @media (min-width: 640px) {
+      .alert-box {
+        padding: 1.5rem 3rem;
+      }
+    }
+    .alert-box.visible {
+      display: block;
+    }
+    .alert-box.fade-out {
+      animation: fadeOut 0.5s ease-out forwards;
+    }
+    .back-btn-container {
+      padding: 0.5rem;
+      margin-left: 0.5rem;
+    }
+    @media (min-width: 640px) {
+      .back-btn-container {
+        padding: 0.5rem 1rem;
+        margin-left: 1rem;
+      }
+    }
+    .back-btn {
+      background: linear-gradient(to right, #fb7185, #e11d48);
+      color: var(--text-light);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    @media (min-width: 640px) {
+      .back-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1.1rem;
+      }
+    }
+    .emotion-btn {
+      background: var(--bg-light);
+      border: 2px solid var(--accent-color);
+      border-radius: 12px;
+      padding: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: var(--shadow);
+    }
+    .emotion-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    @media (min-width: 640px) {
+      .emotion-btn {
+        padding: 1.5rem;
+      }
+    }
+    .emotion-btn.happiness-active {
+      background: #10b981;
+      border-color: #065f46;
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+      color: var(--text-light);
+    }
+    .emotion-btn.sadness-active {
+      background: #3b82f6;
+      border-color: #1e40af;
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+      color: var(--text-light);
+    }
+    .emotion-btn.anger-active {
+      background: #ef4444;
+      border-color: #991b1b;
+      box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+      color: var(--text-light);
+    }
+    .emotion-btn.anxiety-active {
+      background: #facc15;
+      border-color: #ca8a04;
+      box-shadow: 0 0 10px rgba(244, 114, 182, 0.5);
+      color: var(--text-light);
+    }
+    .bottom-back-btn-container {
+      display: flex;
+      justify-content: flex-start;
+      padding: 0.5rem;
+      margin: 0.5rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+    @media (min-width: 640px) {
+      .bottom-back-btn-container {
+        padding: 1rem;
+        margin: 1rem;
+      }
+    }
+    .bottom-back-btn {
+      color: #1a1a3b;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: color 0.3s ease;
+    }
+    .bottom-back-btn:hover {
+      color: #4b5563;
+    }
+    @media (min-width: 640px) {
+      .bottom-back-btn {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-purple-50 min-h-screen flex flex-col">
+  <div class="pt-20"></div>
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full bg-white shadow p-4 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class "text-xl font-bold sm:text-2xl">🌱 CalmBot</div>
+      <div class="hidden md:flex space-x-4 lg:space-x-6">
+        <a href="/" class="text-gray-700 hover:text-green-600 text-sm lg:text-base">Home</a>
+        <a href="/about" class="text-gray-700 hover:text-green-600 text-sm lg:text-base">About</a>
+        <a href="/support" class="text-gray-700 hover:text-green-600 text-sm lg:text-base">Contact</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-2xl sm:text-3xl focus:outline-none">☰</button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2 px-4">
+      <a href="/" class="block text-gray-700 hover:text-green-600 text-sm">Home</a>
+      <a href="/about" class="block text-gray-700 hover:text-green-600 text-sm">About</a>
+      <a href="/support" class="block text-gray-700 hover:text-green-600 text-sm">Contact</a>
+    </div>
+  </nav>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Main Section -->
+  <main class="flex-1 flex flex-col items-center p-4 sm:p-6 gap-4 sm:gap-6">
+    <!-- Feeling Selection -->
+    <div class="bg-white rounded-xl p-4 sm:p-6 shadow-lg w-full max-w-4xl">
+      <div class="flex flex-row flex-wrap justify-center gap-4 sm:gap-6">
+        <button id="happiness-btn" class="emotion-btn flex flex-col items-center transition duration-300 ease-in-out w-[80px] sm:w-[120px]">
+          <div class="text-green-500 text-3xl sm:text-4xl mb-2">😊</div>
+          <span class="font-semibold text-green-700 text-base sm:text-lg">Happy</span>
+        </button>
+        <button id="sadness-btn" class="emotion-btn flex flex-col items-center transition duration-300 ease-in-out w-[80px] sm:w-[120px]">
+          <div class="text-blue-500 text-3xl sm:text-4xl mb-2">😔</div>
+          <span class="font-semibold text-blue-700 text-base sm:text-lg">Sad</span>
+        </button>
+        <button id="anger-btn" class="emotion-btn flex flex-col items-center transition duration-300 ease-in-out w-[80px] sm:w-[120px]">
+          <div class="text-red-500 text-3xl sm:text-4xl mb-2">😡</div>
+          <span class="font-semibold text-red-700 text-base sm:text-lg">Angry</span>
+        </button>
+        <button id="anxiety-btn" class="emotion-btn flex flex-col items-center transition duration-300 ease-in-out w-[80px] sm:w-[120px]">
+          <div class="text-yellow-500 text-3xl sm:text-4xl mb-2">😟</div>
+          <span class="font-semibold text-yellow-700 text-base sm:text-lg">Anxious</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Reflection Box -->
+    <div id="reflectionBox" class="max-w-2xl w-full p-4 sm:p-6 bg-white rounded-xl shadow text-gray-700 text-base sm:text-lg leading-relaxed text-center">
+      <!-- Dynamic content goes here -->
+    </div>
+
+    <!-- Action Buttons -->
+    <div id="actions" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 sm:mt-6 w-full max-w-4xl">
+      <div class="p-3 sm:p-4 bg-white rounded-lg shadow hover:bg-purple-50 text-center cursor-pointer" onclick="openModal('journalModal')">
+        <div class="text-2xl sm:text-3xl mb-2">📓</div>
+        <h3 class="font-semibold text-gray-800 mb-1 text-base sm:text-lg">Journal</h3>
+        <p class="text-xs sm:text-sm text-gray-500">Express your thoughts freely with CalmBot.</p>
+      </div>
+      <div class="p-3 sm:p-4 bg-white rounded-lg shadow hover:bg-purple-50 text-center cursor-pointer" onclick="openModal('breathingModal')">
+        <div class="text-2xl sm:text-3xl mb-2">🌬️</div>
+        <h3 class="font-semibold text-gray-800 mb-1 text-base sm:text-lg">Breathing Exercise</h3>
+        <p class="text-xs sm:text-sm text-gray-600">Calm your mind with guided breathing with CalmBot.</p>
+      </div>
+      <div class="p-3 sm:p-4 bg-white rounded-lg shadow hover:bg-purple-50 text-center cursor-pointer" onclick="openModal('gardenModal')">
+        <div class="text-2xl sm:text-3xl mb-2">🌱</div>
+        <h3 class="font-semibold text-gray-800 mb-1 text-base sm:text-lg">Serenity Garden</h3>
+        <p class="text-xs sm:text-sm text-gray-500">Grow a peaceful digital garden with CalmBot.</p>
+      </div>
+      <div class="p-3 sm:p-4 bg-white rounded-lg shadow hover:bg-purple-50 text-center cursor-pointer" onclick="navigateToChat()">
+        <div class="text-2xl sm:text-3xl mb-2">💬</div>
+        <h3 class="font-semibold text-gray-800 mb-1 text-base sm:text-lg">Chat with AI</h3>
+        <p class="text-xs sm:text-sm text-gray-500">Friendly chat with your CalmBot AI companion.</p>
+      </div>
+    </div>
+
+    <!-- Bottom Back Button -->
+    <div class="bottom-back-btn-container">
+      <a href="/feeling" class="bottom-back-btn inline-block">← Back</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t p-4">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500 gap-2">
+      <p>© 2025 CalmBot. All rights reserved. Barnazaka_designed</p>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-gray-700">🐦</a>
+        <a href="#" class="hover:text-gray-700">📸</a>
+        <a href="#" class="hover:text-gray-700">▶️</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div id="journalModal" class="modal">
+    <div class="modal-content">
+      <h3 class="text-lg sm:text-xl font-bold text-gray-800">Journal Your Thoughts</h3>
+      <p id="journal-prompt" class="text-gray-600 mt-2 text-sm sm:text-base">How are you feeling?</p>
+      <textarea id="journal-input" class="w-full p-3 border border-gray-300 rounded-lg mt-4 text-sm sm:text-base" rows="5" placeholder="Write your thoughts..."></textarea>
+      <div class="flex justify-center gap-3 sm:gap-4 mt-4">
+        <button id="save-journal-btn" class="action-btn">Save</button>
+        <button id="close-journal-btn" class="action-btn bg-gray-400 hover:bg-gray-500">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="breathingModal" class="modal">
+    <div class="modal-content">
+      <h3 class="text-lg sm:text-xl font-bold text-gray-800">Breathing Exercise</h3>
+      <p class="text-gray-600 mt-2 text-sm sm:text-base">Inhale (4s), hold (4s), exhale (8s).</p>
+      <div class="breathing-circle"></div>
+      <audio id="breathing-audio" loop>
+        <source src="/static/breathing_audio.mp3" type="audio/mp3">
+      </audio>
+      <div class="flex justify-center gap-3 sm:gap-4 mt-4">
+        <button id="play-breathing-btn" class="action-btn">Play</button>
+        <button id="pause-breathing-btn" class="action-btn bg-gray-400 hover:bg-gray-500">Pause</button>
+        <button id="close-breathing-btn" class="action-btn bg-gray-400 hover:bg-gray-500">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="gardenModal" class="modal">
+    <div class="modal-content">
+      <h3 class="text-lg sm:text-xl font-bold text-gray-800">Serenity Garden</h3>
+      <p class="text-gray-600 mt-2 text-sm sm:text-base">Click or tap to plant flowers and create calm.</p>
+      <div id="garden-canvas" class="w-full h-[200px] sm:h-[300px] border-2 border-gray-300 rounded-lg mt-4"></div>
+      <audio id="garden-audio">
+        <source src="/static/bird_sounds.mp3" type="audio/mp3">
+      </audio>
+      <div class="flex justify-center gap-3 sm:gap-4 mt-4">
+        <button id="play-garden-btn" class="action-btn">Play</button>
+        <button id="pause-garden-btn" class="action-btn bg-gray-400 hover:bg-gray-500">Pause</button>
+        <button id="close-garden-btn" class="action-btn bg-gray-400 hover:bg-gray-500">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Alert Box -->
+  <div id="alert-box" class="alert-box">
+    Journal Saved!
+  </div>
+
+  <script>
+    const userId = '123';
+    let currentMood = null;
+    let flowers = [];
+
+    const reflections = {
+      'happiness': "It’s a beautiful gift to feel happiness today, a radiant joy that illuminates your spirit amidst life’s unpredictable storms with CalmBot. You have chosen to embrace this moment with an open heart, and that choice is a powerful step toward cultivating lasting inner peace. Let this positivity flow through you as you explore the world around you, sharing kindness with others and finding delight in the smallest details. With CalmBot by your side, take time to journal your joyful thoughts, engage in a soothing breathing exercise, or nurture mindfulness by planting seeds of serenity in the garden, allowing your happiness to grow even deeper.",
+      'sadness': "Your sadness today is a tender reminder that your heart is capable of feeling deeply, and acknowledging it with CalmBot is a courageous act of self-compassion. You’re on a brave journey toward peace, and every gentle step you take honors your resilience. Allow yourself to rest in this moment, trusting that emotions ebb and flow like a quiet river, leading you to brighter days. With CalmBot’s support, pour your heart into journaling to release your thoughts, practice calming breathing techniques to soothe your spirit, or plant seeds of hope in the Serenity Garden, knowing that tranquility will bloom soon in time.",
+      'anger': "Your anger today is a natural signal that something matters deeply to you, and facing it with CalmBot shows your strength. You’re on a path toward calm, channeling this energy with determination. Take a deep breath and let this intensity guide you toward positive action rather than conflict. With CalmBot as your companion, use journaling to uncover your triggers, try breathing exercises to restore your balance, or plant vibrant flowers in the Serenity Garden to cultivate peace, trusting that you have the power to transform this energy into clarity and serenity.",
+      'anxiety': "Anxiety may feel like a stormy sea today, but your resilience shines through as you seek calm with CalmBot. You are stronger than your worries, and each breath you take is a victory over the storm. Pause to ground yourself, trusting that this turbulence will pass like clouds in the sky. With CalmBot’s gentle guidance, unwind your mind through journaling to clarify your thoughts, steady your heart with soothing breathing practices, or plant delicate flowers in the Serenity Garden to foster peace, reminding yourself that you are capable of finding stillness within."
+    };
+
+    const journalPrompts = {
+      'happiness': "What made you smile today?",
+      'sadness': "What’s weighing on your heart? Let it out.",
+      'anger': "What sparked your anger? How can you find calm?",
+      'anxiety':"What’s worrying you? Let’s explore it"
+    };
+
+    async function selectFeeling(feeling) {
+      currentMood = feeling;
+      try {
+        await fetch(`/mood/${feeling}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ user_id: userId })
+        });
+        document.querySelectorAll('.emotion-btn').forEach(btn => {
+          btn.classList.remove('happiness-active', 'sadness-active', 'anger-active', 'anxiety-active');
+          btn.querySelector('span').classList.remove('text-white');
+          btn.querySelector('div').classList.remove('text-white');
+          btn.querySelector('div').classList.add(`text-${feeling === 'happiness' ? 'green' : feeling === 'sadness' ? 'blue' : feeling === 'anger' ? 'red' : 'yellow'}-500`);
+          btn.querySelector('span').classList.add(`text-${feeling === 'happiness' ? 'green' : feeling === 'sadness' ? 'blue' : feeling === 'anger' ? 'red' : 'yellow'}-700`);
+        });
+        const activeBtn = document.getElementById(`${feeling}-btn`);
+        activeBtn.classList.add(`${feeling}-active`);
+        activeBtn.querySelector('span').classList.add('text-white');
+        activeBtn.querySelector('div').classList.remove(`text-${feeling === 'happiness' ? 'green' : feeling === 'sadness' ? 'blue' : feeling === 'anger' ? 'red' : 'yellow'}-500`);
+        activeBtn.querySelector('div').classList.add('text-white');
+        document.getElementById('reflectionBox').classList.remove('hidden');
+        document.getElementById('actions').classList.remove('hidden');
+        document.getElementById('reflectionBox').innerText = reflections[feeling];
+        document.getElementById('journal-prompt').textContent = journalPrompts[feeling] || "How are you feeling?";
+      } catch (error) {
+        console.error('Error logging mood:', error);
+        alert('Error logging your mood. Please try again.');
+      }
+    }
+
+    window.addEventListener('load', () => {
+      const emotion = localStorage.getItem('selectedEmotion');
+      if (emotion && ['happiness', 'sadness', 'anger', 'anxiety'].includes(emotion)) {
+        selectFeeling(emotion);
+        currentMood = emotion;
+      } else {
+        document.getElementById('reflectionBox').innerText = "Please select an emotion to continue.";
+      }
+    });
+
+    function navigateToChat() {
+      if (currentMood) {
+        localStorage.setItem('selectedEmotion', currentMood);
+      }
+      window.location.href = '/calmbot';
+    }
+
+    function initGarden() {
+      const existingCanvas = document.querySelector('#garden-canvas canvas');
+      if (existingCanvas) existingCanvas.remove();
+      new p5(sketch => {
+        sketch.setup = () => {
+          let canvasWidth = Math.min(560, window.innerWidth - 40);
+          let canvasHeight = window.innerWidth < 640 ? 200 : 300;
+          let canvas = sketch.createCanvas(canvasWidth, canvasHeight);
+          canvas.parent('garden-canvas');
+          sketch.background(135, 206, 235);
+          flowers = [];
+        };
+        sketch.draw = () => {
+          sketch.background(135, 206, 235);
+          sketch.fill(34, 139, 34);
+          sketch.rect(0, sketch.height - 50, sketch.width, 50);
+          for (let flower of flowers) {
+            sketch.fill(flower.color);
+            sketch.ellipse(flower.x, flower.y - 20, 20, 20);
+            sketch.stroke(0, 100, 0);
+            sketch.strokeWeight(2);
+            sketch.line(flower.x, flower.y, flower.x, flower.y - 20);
+          }
+        };
+        sketch.mousePressed = () => {
+          if (sketch.mouseX > 0 && sketch.mouseX < sketch.width && sketch.mouseY > 0 && sketch.mouseY < sketch.height) {
+            let color = sketch.color(255, 105, 180);
+            if (currentMood === 'happiness') color = sketch.color(255, 215, 0);
+            else if (currentMood === 'sadness') color = sketch.color(70, 130, 180);
+            else if (currentMood === 'anger') color = sketch.color(220, 20, 60);
+            else if (currentMood === 'anxiety') color = sketch.color(60, 179, 113);
+            flowers.push({ x: sketch.mouseX, y: sketch.height - 50, color });
+          }
+        };
+        sketch.touchStarted = () => {
+          if (sketch.mouseX > 0 && sketch.mouseX < sketch.width && sketch.mouseY > 0 && sketch.mouseY < sketch.height) {
+            let color = sketch.color(255, 105, 180);
+            if (currentMood === 'happiness') color = sketch.color(255, 215, 0);
+            else if (currentMood === 'sadness') color = sketch.color(70, 130, 180);
+            else if (currentMood === 'anger') color = sketch.color(220, 20, 60);
+            else if (currentMood === 'anxiety') color = sketch.color(60, 179, 113);
+            flowers.push({ x: sketch.mouseX, y: sketch.height - 50, color });
+            return false; // Prevent default touch behavior
+          }
+        };
+      }, 'garden-canvas');
+    }
+
+    function openModal(modalId) {
+      document.getElementById(modalId).classList.add('visible');
+      if (modalId === 'gardenModal') {
+        initGarden();
+        document.getElementById('garden-audio').load();
+        document.getElementById('garden-audio').play().catch(error => {
+          console.error('Audio playback failed:', error);
+        });
+      }
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.remove('visible');
+      if (modalId === 'breathingModal') {
+        document.getElementById('breathing-audio').pause();
+      } else if (modalId === 'gardenModal') {
+        document.getElementById('garden-audio').pause();
+      }
+    }
+
+    document.getElementById('play-breathing-btn').addEventListener('click', () => {
+      document.getElementById('breathing-audio').play();
+    });
+
+    document.getElementById('pause-breathing-btn').addEventListener('click', () => {
+      document.getElementById('breathing-audio').pause();
+    });
+
+    document.getElementById('close-breathing-btn').addEventListener('click', () => {
+      closeModal('breathingModal');
+    });
+
+    document.getElementById('play-garden-btn').addEventListener('click', () => {
+      document.getElementById('garden-audio').play();
+    });
+
+    document.getElementById('pause-garden-btn').addEventListener('click', () => {
+      document.getElementById('garden-audio').pause();
+    });
+
+    document.getElementById('close-garden-btn').addEventListener('click', () => {
+      closeModal('gardenModal');
+    });
+
+    document.getElementById('save-journal-btn').addEventListener('click', async () => {
+      const entry = document.getElementById('journal-input').value.trim();
+      if (entry && currentMood) {
+        try {
+          document.getElementById('loading-screen').classList.add('visible');
+          await fetch('/journal', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId, mood: currentMood, entry })
+          });
+          await new Promise(resolve => setTimeout(resolve, 1000));
+          document.getElementById('loading-screen').classList.remove('visible');
+          const alertBox = document.getElementById('alert-box');
+          alertBox.classList.add('visible');
+          setTimeout(() => {
+            alertBox.classList.add('fade-out');
+            setTimeout(() => {
+              alertBox.classList.remove('visible', 'fade-out');
+            }, 500);
+          }, 2000);
+          document.getElementById('journal-input').value = '';
+          closeModal('journalModal');
+        } catch (error) {
+          console.error('Error saving journal:', error);
+          document.getElementById('loading-screen').classList.remove('visible');
+          alert('Error saving journal. Please try again.');
+        }
+      } else {
+        alert('Please enter your thoughts and ensure a mood is selected.');
+      }
+    });
+
+    document.getElementById('close-journal-btn').addEventListener('click', () => {
+      closeModal('journalModal');
+    });
+  </script>
+</body>
+</html>
