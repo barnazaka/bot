@@ -46,7 +46,7 @@
       min-height: 200px;
     }
     #emotion-grid {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
     @media (max-width: 640px) {
       #emotion-grid {
@@ -148,9 +148,21 @@
   </footer>
 
   <script>
-    const userId = '123';
+    async function getUserId() {
+      try {
+        const res = await fetch('/get-user-ip', {
+          method: 'GET',
+          headers: { 'Content-Type': 'application/json' }
+        });
+        const data = await res.json();
+        return data.user_id;
+      } catch (error) {
+        console.error('Error fetching user ID:', error);
+        return 'anonymous'; // Fallback
+      }
+    }
 
-    async function fetchEmotionData() {
+    async function fetchEmotionData(userId) {
       try {
         const res = await fetch('/progress', {
           method: 'POST',
@@ -249,7 +261,8 @@
     }
 
     window.addEventListener('load', async () => {
-      const data = await fetchEmotionData();
+      const userId = await getUserId();
+      const data = await fetchEmotionData(userId);
       initChart(data);
       updateEmotionGrid(data);
       updateTrendsAndRecommendations(data);
