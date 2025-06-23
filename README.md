@@ -74,7 +74,7 @@ CalmBot is more than a tool—it’s a companion for those seeking to reclaim th
 ## 🔍 How It Works
 
 ### Access CalmBot
-- Website: [http://localhost:5000](http://localhost:5000)
+- Website: https://bot-1-txcf.onrender.com/
 - Telegram: Search for `@YourCalmBot`
 
 ### Select Your Mood
