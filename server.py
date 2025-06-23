@@ -90,14 +90,14 @@ def home_page():
 @app.route('/about')
 def about():
     try:
-        return render_template('About.html')
+        return render_template('about.html')
     except:
         return jsonify({'error': 'About page not yet created'}), 404
 
 @app.route('/support')
 def support():
     try:
-        return render_template('Support.html')
+        return render_template('support.html')
     except:
         return jsonify({'error': 'Support page not yet created'}), 404
 
