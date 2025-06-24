@@ -33,31 +33,70 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     }
-    @media (min-width: 640px) {
-      .action-btn {
-        padding: 0.25rem 1rem;
-        font-size: 0.75rem;
-      }
-    }
     #emotion-chart {
       width: 100% !important;
       max-width: 100%;
       height: auto !important;
       min-height: 200px;
+      background: #f9fafb;
+      border-radius: 12px;
+      padding: 1rem;
     }
     #emotion-grid {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
+    /* Mobile-specific styles */
     @media (max-width: 640px) {
-      #emotion-grid {
+      .action-btn {
+        padding: 0.25rem 0.75rem;
         font-size: 0.75rem;
+      }
+      #emotion-chart {
+        min-height: 180px;
+        padding: 0.5rem;
+      }
+      #emotion-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        font-size: 0.65rem;
         gap: 0.5rem;
       }
       #emotion-grid div {
         padding: 0.5rem;
       }
       #emotion-grid span {
-        font-size: 1.25rem;
+        font-size: 1rem;
+      }
+      .container {
+        padding: 0.5rem !important;
+      }
+      h1 {
+        font-size: 1.5rem !important;
+      }
+      h2 {
+        font-size: 0.875rem !important;
+      }
+      p, span, li {
+        font-size: 0.75rem !important;
+      }
+    }
+    /* PC-specific styles */
+    @media (min-width: 640px) {
+      .action-btn {
+        padding: 0.25rem 1rem;
+        font-size: 0.75rem;
+      }
+      #emotion-chart {
+        min-height: 350px;
+      }
+      #emotion-grid {
+        font-size: 0.875rem;
+        gap: 1rem;
+      }
+      #emotion-grid div {
+        padding: 1rem;
+      }
+      #emotion-grid span {
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -66,7 +105,7 @@
   <!-- Navigation -->
   <nav class="fixed top-0 left-0 w-full bg-white shadow p-4 z-50">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <div class="text-xl font-bold sm:text-2xl">🌱 CalmBot</div>
+      <a href="/" class="text-2xl font-bold">🌱 CalmBot</a>
       <div class="hidden md:flex space-x-4 lg:space-x-6">
         <a href="/" class="text-gray-700 hover:text-green-600 text-sm lg:text-base">Home</a>
         <a href="/about" class="text-gray-700 hover:text-green-600 text-sm lg:text-base">About</a>
@@ -88,81 +127,10 @@
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
-  </script>
 
-  <div class="flex-1 max-w-6xl mx-auto p-4 sm:p-6 pt-16 sm:pt-20">
-    <div class="text-center mb-6 sm:mb-8">
-      <div class="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 bg-gradient-to-tr from-pink-500 to-purple-500 rounded-full flex items-center justify-center">
-        <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-        </svg>
-      </div>
-      <h1 class="text-2xl sm:text-3xl font-bold text-gray-800">Emotion Tracker Dashboard</h1>
-      <p class="text-gray-500 sm:text-gray-600 mt-2 sm:mt-4 text-sm sm:text-base">Track your emotional journey and understand your feelings better with detailed insights and analytics.</p>
-    </div>
+    const userId = '123';
 
-    <div class="bg-white rounded-2xl shadow-xl p-4 sm:p-6">
-      <div class="flex flex-col sm:flex-row justify-between items-center mb-4 sm:mb-6">
-        <h2 class="text-base sm:text-lg font-semibold text-gray-800">Emotion Analytics</h2>
-        <span class="text-xs sm:text-sm text-gray-400">Last 30 Days</span>
-      </div>
-
-      <div id="emotion-chart" class="mb-6 sm:mb-8"></div>
-
-      <div id="emotion-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 text-white font-semibold text-center text-xs sm:text-sm mb-4 sm:mb-6">
-        <div class="bg-yellow-400 p-3 sm:p-4 rounded-xl">😊😄<br>Happiness<br><span class="text-xl sm:text-2xl font-bold" id="happiness-count">0</span></div>
-        <div class="bg-blue-500 p-3 sm:p-4 rounded-xl">😔<br>Sadness<br><span class="text-xl sm:text-2xl font-bold" id="sadness-count">0</span></div>
-        <div class="bg-red-500 p-3 sm:p-4 rounded-xl">😡😣<br>Anger<br><span class="text-xl sm:text-2xl font-bold" id="anger-count">0</span></div>
-        <div class="bg-green-500 p-3 sm:p-4 rounded-xl">😟<br>Anxiety<br><span class="text-xl sm:text-2xl font-bold" id="anxiety-count">0</span></div>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-        <div class="bg-white shadow rounded-xl p-3 sm:p-4 border">
-          <h3 class="font-semibold text-gray-700 mb-2 text-sm sm:text-base">Weekly Trends</h3>
-          <p class="text-xs sm:text-sm"><span class="font-medium text-gray-600">Most Happy Day:</span> <span id="most-happy-day" class="text-blue-600 font-semibold">N/A</span></p>
-          <p class="text-xs sm:text-sm"><span class="font-medium text-gray-600">Challenging Day:</span> <span id="challenging-day" class="text-red-500 font-semibold">N/A</span></p>
-          <p class="text-xs sm:text-sm"><span class="font-medium text-gray-600">Average Mood Score:</span> <span id="avg-mood-score" class="text-green-600 font-semibold">N/A</span></p>
-        </div>
-        <div class="bg-white shadow rounded-xl p-3 sm:p-4 border">
-          <h3 class="font-semibold text-gray-700 mb-2 text-sm sm:text-base">Recommendations</h3>
-          <ul id="recommendations" class="list-disc pl-4 list-inside text-gray-600 text-xs sm:text-sm">
-            <li>Try meditation when feeling anxious</li>
-            <li>Connect with friends on challenging days</li>
-            <li>Maintain your positive routines</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="bg-white border-t p-4">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500 gap-2">
-      <p>© 2025 CalmBot. All rights reserved. Barnazaka_designed</p>
-      <div class="flex gap-4">
-        <a href="#" class="hover:text-blue-600">🐦</a>
-        <a href="#" class="hover:text-blue-600">📸</a>
-        <a href="#" class="hover:text-blue-600">▶️</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    async function getUserId() {
-      try {
-        const res = await fetch('/get-user-ip', {
-          method: 'GET',
-          headers: { 'Content-Type': 'application/json' }
-        });
-        const data = await res.json();
-        return data.user_id;
-      } catch (error) {
-        console.error('Error fetching user ID:', error);
-        return 'anonymous'; // Fallback
-      }
-    }
-
-    async function fetchEmotionData(userId) {
+    async function fetchEmotionData() {
       try {
         const res = await fetch('/progress', {
           method: 'POST',
@@ -182,29 +150,55 @@
       if (existingCanvas) existingCanvas.remove();
       new p5(sketch => {
         sketch.setup = () => {
-          let canvasWidth = Math.min(800, document.getElementById('emotion-chart').offsetWidth);
-          let canvasHeight = window.innerWidth < 640 ? 200 : 300;
+          let canvasWidth = Math.min(800, document.getElementById('emotion-chart').offsetWidth - 32); // Account for padding
+          let canvasHeight = window.innerWidth < 640 ? 180 : 350;
           let canvas = sketch.createCanvas(canvasWidth, canvasHeight);
           canvas.parent('emotion-chart');
+          // Ensure canvas is visible
+          canvas.style('display', 'block');
         };
         sketch.draw = () => {
-          sketch.background(255);
+          sketch.background(249, 250, 251); // Match #f9fafb
           let barWidth = sketch.width / data.emotions.length;
-          let colors = ['#f59e0b', '#3b82f6', '#ef4444', '#10b981'];
+          let colors = ['#22d3ee', '#3b82f6', '#ef4444', '#10b981'];
+          // Draw grid lines
+          sketch.stroke(200);
+          sketch.strokeWeight(1);
+          for (let y = 0; y <= sketch.height - 40; y += 40) {
+            sketch.line(0, sketch.height - y, sketch.width, sketch.height - y);
+          }
+          // Draw bars
           for (let i = 0; i < data.emotions.length; i++) {
-            sketch.fill(colors[i]);
+            // Gradient fill
+            let gradient = sketch.drawingContext.createLinearGradient(
+              i * barWidth + 10, sketch.height,
+              i * barWidth + 10, sketch.height - sketch.map(data.counts[i], 0, Math.max(...data.counts, 10), 0, sketch.height - 40)
+            );
+            gradient.addColorStop(0, colors[i]);
+            gradient.addColorStop(1, colors[i] + '80');
+            sketch.drawingContext.fillStyle = gradient;
+            sketch.noStroke();
             let h = sketch.map(data.counts[i], 0, Math.max(...data.counts, 10), 0, sketch.height - 40);
-            sketch.rect(i * barWidth + 10, sketch.height - h, barWidth - 20, h);
-            sketch.fill(0);
+            sketch.rect(i * barWidth + 10, sketch.height - h, barWidth - 20, h, 8);
+            // Glow effect on hover
+            if (sketch.mouseX > i * barWidth + 10 && sketch.mouseX < i * barWidth + barWidth - 10 &&
+                sketch.mouseY > sketch.height - h && sketch.mouseY < sketch.height) {
+              sketch.drawingContext.shadowBlur = 10;
+              sketch.drawingContext.shadowColor = colors[i];
+              sketch.rect(i * barWidth + 10, sketch.height - h, barWidth - 20, h, 8);
+              sketch.drawingContext.shadowBlur = 0;
+            }
+            // Text
+            sketch.fill(31, 41, 55); // Match --text-dark
             sketch.textAlign(sketch.CENTER);
-            sketch.textSize(window.innerWidth < 640 ? 10 : 12);
+            sketch.textSize(window.innerWidth < 640 ? 8 : 14);
             sketch.text(data.emotions[i].charAt(0).toUpperCase() + data.emotions[i].slice(1), i * barWidth + barWidth / 2, sketch.height - 10);
             sketch.text(data.counts[i], i * barWidth + barWidth / 2, sketch.height - h - 10);
           }
         };
         sketch.windowResized = () => {
-          let canvasWidth = Math.min(800, document.getElementById('emotion-chart').offsetWidth);
-          let canvasHeight = window.innerWidth < 640 ? 200 : 300;
+          let canvasWidth = Math.min(800, document.getElementById('emotion-chart').offsetWidth - 32);
+          let canvasHeight = window.innerWidth < 640 ? 180 : 350;
           sketch.resizeCanvas(canvasWidth, canvasHeight);
         };
       }, 'emotion-chart');
@@ -261,12 +255,68 @@
     }
 
     window.addEventListener('load', async () => {
-      const userId = await getUserId();
-      const data = await fetchEmotionData(userId);
+      const data = await fetchEmotionData();
       initChart(data);
       updateEmotionGrid(data);
       updateTrendsAndRecommendations(data);
     });
   </script>
+
+  <div class="flex-1 max-w-6xl mx-auto p-4 sm:p-6 pt-16 sm:pt-20 container">
+    <div class="text-center mb-6 sm:mb-8">
+      <div class="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 bg-gradient-to-tr from-pink-500 to-purple-500 rounded-full flex items-center justify-center">
+        <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+      </div>
+      <h1 class="text-2xl sm:text-3xl font-bold text-gray-800">Emotion Tracker Dashboard</h1>
+      <p class="text-gray-500 sm:text-gray-600 mt-2 sm:mt-4 text-sm sm:text-base">Track your emotional journey and understand your feelings better with detailed insights and analytics.</p>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-xl p-4 sm:p-6">
+      <div class="flex flex-col sm:flex-row justify-between items-center mb-4 sm:mb-6">
+        <h2 class="text-base sm:text-lg font-semibold text-gray-800">Emotion Analytics</h2>
+        <span class="text-xs sm:text-sm text-gray-400">Last 30 Days</span>
+      </div>
+
+      <div id="emotion-chart" class="mb-6 sm:mb-8"></div>
+
+      <div id="emotion-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 text-white font-semibold text-center text-xs sm:text-sm mb-4 sm:mb-6">
+        <div class="bg-yellow-400 p-3 sm:p-4 rounded-xl">😊<br>Happiness<br><span class="text-xl sm:text-2xl font-bold" id="happiness-count">0</span></div>
+        <div class="bg-blue-500 p-3 sm:p-4 rounded-xl">😔<br>Sadness<br><span class="text-xl sm:text-2xl font-bold" id="sadness-count">0</span></div>
+        <div class="bg-red-500 p-3 sm:p-4 rounded-xl">😡<br>Anger<br><span class="text-xl sm:text-2xl font-bold" id="anger-count">0</span></div>
+        <div class="bg-green-500 p-3 sm:p-4 rounded-xl">😟<br>Anxiety<br><span class="text-xl sm:text-2xl font-bold" id="anxiety-count">0</span></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+        <div class="bg-white shadow rounded-xl p-3 sm:p-4 border">
+          <h3 class="font-semibold text-gray-700 mb-2 text-sm sm:text-base">Weekly Trends</h3>
+          <p class="text-xs sm:text-sm"><span class="font-medium text-gray-600">Most Happy Day:</span> <span id="most-happy-day" class="text-blue-600 font-semibold">N/A</span></p>
+          <p class="text-xs sm:text-sm"><span class="font-medium text-gray-600">Challenging Day:</span> <span id="challenging-day" class="text-red-600 font-semibold">N/A</span></p>
+          <p class="text-xs sm:text-sm"><span class="font-medium text-gray-600">Average Mood:</span> <span id="avg-mood-score" class="text-green-600 font-semibold">N/A</span></p>
+        </div>
+        <div class="bg-white shadow rounded-xl p-3 sm:p-4 border">
+          <h3 class="font-semibold text-gray-700 mb-2 text-sm sm:text-base">Recommendations</h3>
+          <ul id="recommendations" class="list-disc pl-4 list-inside text-gray-600 text-xs sm:text-sm">
+            <li>Try meditation when feeling anxious</li>
+            <li>Connect with friends on challenging days</li>
+            <li>Maintain your positive routines</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t p-4">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500 gap-2">
+      <p>© 2025 CalmBot. All rights reserved. Barnazaka_designed</p>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-blue-600">🐦</a>
+        <a href="#" class="hover:text-blue-600">📸</a>
+        <a href="#" class="hover:text-blue-600">▶️</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
