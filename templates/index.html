@@ -7,9 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnH2N2B5pEuVJJ+rxjT1Q6tuT/6uPb3rcNn37Wl7rd7/EU+K0O5gYv7FpC18JNpD33rD+14DQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Favicon -->
-<link rel="icon" type="image/png" href="{{ url_for('static', filename='image.png') }}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='image.png') }}">
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -20,7 +18,6 @@
       --text-light: #f8fafc;
       --shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
     }
-
   </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -29,179 +26,176 @@
  <!-- Navigation -->
 <nav class="fixed top-0 left-0 w-full bg-white shadow p-4 z-50">
   <div class="max-w-7xl mx-auto flex items-center justify-between">
-    <div class="text-2xl font-bold">🌱 CalmBot</div>
+    <a href="/" class="text-2xl font-bold text-emerald-600">🌱 CalmBot</a>
     <div class="hidden md:flex space-x-6 items-center">
-      <a href="/home" class="text-gray-700 hover:text-green-600">Home</a>
-      <a href="/about" class="text-gray-700 hover:text-green-600">About</a>
-      <a href="/support" class="text-gray-700 hover:text-green-600">Contact</a>
+      <a href="/" class="text-gray-700 hover:text-emerald-600">Home</a>
+      <a href="/about" class="text-gray-700 hover:text-emerald-600">About</a>
+      <a href="/support" class="text-gray-700 hover:text-emerald-600">Contact</a>
       <a href="/feeling"
-         class="bg-green-500 text-white px-4 py-2 rounded-full font-medium shadow hover:bg-green-600 transition">
+         class="bg-emerald-500 text-white px-4 py-2 rounded-full font-medium shadow hover:bg-emerald-600 transition">
         Start Here
       </a>
     </div>
     <button id="menu-btn" class="md:hidden text-3xl focus:outline-none">☰</button>
   </div>
   <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2 px-4">
-    <a href="/home" class="block text-gray-700 hover:text-green-600">Home</a>
-    <a href="/about" class="block text-gray-700 hover:text-green-600">About</a>
-    <a href="/support" class="block text-gray-700 hover:text-green-600">Contact</a>
-    <a href="/start"
-       class="block bg-green-500 text-white px-4 py-2 rounded-full font-medium shadow hover:bg-green-600 transition">
+    <a href="/" class="block text-gray-700 hover:text-emerald-600">Home</a>
+    <a href="/about" class="block text-gray-700 hover:text-emerald-600">About</a>
+    <a href="/support" class="block text-gray-700 hover:text-emerald-600">Contact</a>
+    <a href="/feeling"
+       class="block bg-emerald-500 text-white px-4 py-2 rounded-full font-medium shadow hover:bg-emerald-600 transition">
       Start Here
     </a>
   </div>
 </nav>
 
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
 
+<!-- Hero Section -->
+<section class="flex flex-col items-center justify-center bg-gradient-to-br from-pink-50 to-rose-100 py-16 px-6 text-center">
+  <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Welcome to Your Safe Space with CalmBot</h1>
+  <p class="text-lg text-gray-700 max-w-2xl mb-4">
+    A gentle place to find peace, healing, and support on your journey toward emotional wellbeing with CalmBot.
+  </p>
+  <p class="text-base text-gray-600 max-w-xl mb-8">
+    We're here to help you navigate through difficult emotions and find moments of calm in your day.
+  </p>
+  <a href="/feeling"
+     class="rounded-full bg-emerald-500 px-6 py-3 text-white font-medium shadow hover:bg-emerald-600 transition">
+    Tell Me How You Feel
+  </a>
 
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
-
-  <!-- Hero Section: Warm welcoming peach -->
-  <section class="flex flex-col items-center justify-center bg-rose-50 py-16 px-6 text-center">
-    <h1 class="text-4xl font-bold text-gray-900 mb-4">Welcome to Your Safe Space with CalmBot</h1>
-    <p class="text-lg text-gray-700 max-w-2xl mb-4">
-      A gentle place to find peace, healing, and support on your journey toward emotional wellbeing with CalmBot.
-    </p>
-    <p class="text-base text-gray-600 max-w-xl mb-8">
-      We're here to help you navigate through difficult emotions and find moments of calm in your day.
-    </p>
-    <a href="/feeling"
-  class="rounded-full bg-green-500 px-6 py-3 text-white font-medium shadow hover:bg-green-600 transition">
-  Click Here & Tell Me How You Feel
-</a>
-
-
-    <!-- Quote Cards -->
-    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl">
-      <div class="rounded-xl bg-red-100 p-6 text-left shadow">
-        <p class="text-pink-800 text-3xl mb-3">“</p>
-        <p class="text-gray-700 mb-4">
-          "Healing doesn't mean the damage never existed. It means the damage no longer controls your life."
-        </p>
-        <p class="text-sm text-gray-600">— Akshay Dubey</p>
-      </div>
-      <div class="rounded-xl bg-indigo-100 p-6 text-left shadow">
-        <p class="text-indigo-800 text-3xl mb-3">“</p>
-        <p class="text-gray-700 mb-4">
-          "You don't have to control your thoughts. You just have to stop letting them control you."
-        </p>
-        <p class="text-sm text-gray-600">— Dan Millman</p>
-      </div>
-      <div class="rounded-xl bg-blue-100 p-6 text-left shadow">
-        <p class="text-blue-800 text-3xl mb-3">“</p>
-        <p class="text-gray-700 mb-4">
-          "Be patient with yourself. Self-growth is tender; it's holy ground."
-        </p>
-        <p class="text-sm text-gray-600">— Stephen Covey</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Meet Your Companion Section: Calm sky blue -->
-  <section class="bg-sky-50 py-16 px-6 flex flex-col items-center text-center">
-    <div class="bg-white rounded-xl shadow p-8 max-w-3xl w-full">
-      <div class="flex justify-center mb-6">
-        <div class="bg-blue-100 rounded-full p-4">
-          <span class="text-4xl">🤖</span>
-        </div>
-      </div>
-      <h2 class="text-3xl font-bold mb-4">Meet Your CalmBot Companion</h2>
+  <!-- Quote Cards -->
+  <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
+    <div class="rounded-xl bg-orange-100 p-6 text-left shadow">
+      <p class="text-orange-800 text-3xl mb-3">“</p>
       <p class="text-gray-700 mb-4">
-        I'm here to provide support, encouragement, and practical tools to help you navigate difficult emotions.
+        "Healing doesn't mean the damage never existed. It means the damage no longer controls your life."
       </p>
-      <p class="text-gray-700 mb-6">
-        Together, we’ll explore techniques for mindfulness, emotional regulation, and self-compassion to help you find peace.
-      </p>
-      <a href="/calmbot"
-  class="rounded-full bg-purple-500 px-6 py-3 text-white font-medium shadow hover:bg-purple-600 transition">
-  Chat with the AI Now
-</a>
+      <p class="text-sm text-gray-600">— Akshay Dubey</p>
     </div>
-  </section>
+    <div class="rounded-xl bg-blue-100 p-6 text-left shadow">
+      <p class="text-blue-800 text-3xl mb-3">“</p>
+      <p class="text-gray-700 mb-4">
+        "You don't have to control your thoughts. You just have to stop letting them control you."
+      </p>
+      <p class="text-sm text-gray-600">— Dan Millman</p>
+    </div>
+    <div class="rounded-xl bg-purple-100 p-6 text-left shadow">
+      <p class="text-purple-800 text-3xl mb-3">“</p>
+      <p class="text-gray-700 mb-4">
+        "Be patient with yourself. Self-growth is tender; it's holy ground."
+      </p>
+      <p class="text-sm text-gray-600">— Stephen Covey</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Daily Practices Section: Gentle amber -->
-  <section class="py-16 px-6 bg-amber-50 text-center">
-    <h2 class="text-3xl font-bold mb-12">Daily Practices for Inner Peace</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-      <div class="bg-green-50 rounded-xl p-6 text-left shadow">
-        <div class="text-green-500 text-3xl mb-4">💚</div>
-        <h3 class="text-xl font-semibold mb-2">Self-Compassion</h3>
-        <p class="text-gray-700 mb-4">
-          Treat yourself with the same kindness you'd offer to a friend. Imperfection is part of being human.
-        </p>
-        <a href="/calmbot" class="text-green-600 font-medium hover:underline">Learn more</a>
-      </div>
-      <div class="bg-blue-50 rounded-xl p-6 text-left shadow">
-        <div class="text-blue-400 text-3xl mb-4">🌿</div>
-        <h3 class="text-xl font-semibold mb-2">Mindful Moments</h3>
-        <p class="text-gray-700 mb-4">
-          Pause to notice your breath, your surroundings, and your emotions without judgment.
-        </p>
-        <a href="/calmbot" class="text-green-600 font-medium hover:underline">Learn more</a>
-      </div>
-      <div class="bg-purple-50 rounded-xl p-6 text-left shadow">
-        <div class="text-purple-400 text-3xl mb-4">📝</div>
-        <h3 class="text-xl font-semibold mb-2">Gratitude Practice</h3>
-        <p class="text-gray-700 mb-4">
-          Write down three things you're grateful for each day to shift focus to life's positives.
-        </p>
-        <a href="/calmbot" class="text-green-600 font-medium hover:underline">Learn more</a>
+<!-- Meet Your Companion Section -->
+<section class="bg-gradient-to-br from-sky-50 to-cyan-100 py-16 px-6 flex flex-col items-center text-center">
+  <div class="bg-white rounded-xl shadow p-8 max-w-3xl w-full">
+    <div class="flex justify-center mb-6">
+      <div class="bg-emerald-100 rounded-full p-4">
+        <span class="text-4xl">🤖</span>
       </div>
     </div>
-  </section>
+    <h2 class="text-3xl font-bold mb-4">Meet Your CalmBot Companion</h2>
+    <p class="text-gray-700 mb-4">
+      I'm here to provide support, encouragement, and practical tools to help you navigate difficult emotions.
+    </p>
+    <p class="text-gray-700 mb-6">
+      Together, we’ll explore techniques for mindfulness, emotional regulation, and self-compassion to help you find peace.
+    </p>
+    <a href="/calmbot"
+       class="rounded-full bg-purple-500 px-6 py-3 text-white font-medium shadow hover:bg-purple-600 transition">
+      Chat with the AI Now
+    </a>
+  </div>
+</section>
 
-  <section class="py-16 px-6 bg-green-100 text-center">
+<!-- Daily Practices Section -->
+<section class="py-16 px-6 bg-gradient-to-br from-yellow-50 to-amber-100 text-center">
+  <h2 class="text-3xl font-bold mb-12">Daily Practices for Inner Peace</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <div class="bg-emerald-50 rounded-xl p-6 text-left shadow">
+      <div class="text-emerald-500 text-3xl mb-4">💚</div>
+      <h3 class="text-xl font-semibold mb-2">Self-Compassion</h3>
+      <p class="text-gray-700 mb-4">
+        Treat yourself with the same kindness you'd offer to a friend. Imperfection is part of being human.
+      </p>
+      <a href="/calmbot" class="text-emerald-600 font-medium hover:underline">Learn more</a>
+    </div>
+    <div class="bg-blue-50 rounded-xl p-6 text-left shadow">
+      <div class="text-blue-400 text-3xl mb-4">🌿</div>
+      <h3 class="text-xl font-semibold mb-2">Mindful Moments</h3>
+      <p class="text-gray-700 mb-4">
+        Pause to notice your breath, your surroundings, and your emotions without judgment.
+      </p>
+      <a href="/calmbot" class="text-emerald-600 font-medium hover:underline">Learn more</a>
+    </div>
+    <div class="bg-purple-50 rounded-xl p-6 text-left shadow">
+      <div class="text-purple-400 text-3xl mb-4">📝</div>
+      <h3 class="text-xl font-semibold mb-2">Gratitude Practice</h3>
+      <p class="text-gray-700 mb-4">
+        Write down three things you're grateful for each day to shift focus to life's positives.
+      </p>
+      <a href="/calmbot" class="text-emerald-600 font-medium hover:underline">Learn more</a>
+    </div>
+  </div>
+</section>
+
+<!-- Social Media Section -->
+<section class="py-16 px-6 bg-gradient-to-br from-green-100 to-teal-100 text-center">
   <h2 class="text-3xl font-bold mb-4">Take CalmBot With You</h2>
   <p class="text-gray-700 max-w-2xl mx-auto mb-6">
     CalmBot isn't just for your browser. Stay supported on the go by connecting with CalmBot on your favorite messaging and social platforms.
   </p>
-
-  <!-- Social Media Icons Row -->
   <div class="flex justify-center space-x-10 text-4xl">
-    <!-- Telegram -->
     <a href="https://t.me/calm56bot" target="_blank" aria-label="Telegram" class="text-[#0088cc] hover:text-[#006699] hover:scale-110 hover:shadow-md transition transform cursor-pointer">
       <img src="https://img.icons8.com/color/48/telegram-app.png" alt="Telegram" class="w-10 h-10">
     </a>
-
-    <!-- WhatsApp -->
     <a href="#" onclick="showComingSoon(event)" aria-label="WhatsApp" class="text-[#25D366] hover:text-[#1DA851] hover:scale-110 hover:shadow-md transition transform cursor-pointer">
       <img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp" class="w-10 h-10">
     </a>
-
-    <!-- X -->
     <a href="#" onclick="showComingSoon(event)" aria-label="X" class="text-[#000000] hover:text-[#333333] hover:scale-110 hover:shadow-md transition transform cursor-pointer">
       <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
         <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zM16.9 20.846h2.043L7.306 3.154H5.147l11.753 17.692z"/>
       </svg>
     </a>
-
-    <!-- Instagram -->
     <a href="#" onclick="showComingSoon(event)" aria-label="Instagram" class="text-[#E1306C] hover:text-[#C13584] hover:scale-110 hover:shadow-md transition transform cursor-pointer">
       <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram" class="w-10 h-10">
     </a>
-
-    <!-- Facebook -->
     <a href="#" onclick="showComingSoon(event)" aria-label="Facebook" class="text-[#1877F2] hover:text-[#145DBF] hover:scale-110 hover:shadow-md transition transform cursor-pointer">
       <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" class="w-10 h-10">
     </a>
   </div>
-
-  <!-- Coming Soon Modal -->
   <div id="comingSoonModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
     <div class="bg-white rounded-lg p-8 max-w-sm w-full text-center shadow-lg">
-      <h3 class="text-2xl font-bold text-green-700 mb-4">Coming Soon!</h3>
+      <h3 class="text-2xl font-bold text-emerald-700 mb-4">Coming Soon!</h3>
       <p class="text-gray-600 mb-6">This feature is not yet available, but we're working on it!</p>
-      <button onclick="closeComingSoon()" class="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-600 transition">
+      <button onclick="closeComingSoon()" class="bg-emerald-700 text-white px-4 py-2 rounded hover:bg-emerald-600 transition">
         Close
       </button>
     </div>
   </div>
+</section>
+
+<!-- Community Section -->
+<section class="py-16 px-6 bg-gradient-to-br from-purple-50 to-indigo-100 text-center">
+  <h2 class="text-3xl font-bold mb-4">Join Our Community</h2>
+  <p class="text-gray-700 max-w-2xl mx-auto mb-6">
+    Connect with others on a similar journey. Share experiences, find inspiration, and grow together with CalmBot’s supportive community.
+  </p>
+  <a href=""
+     class="rounded-full bg-emerald-500 px-6 py-3 text-white font-medium shadow hover:bg-emerald-600 transition">
+    Join Now
+  </a>
 </section>
 
 <script>
@@ -215,13 +209,10 @@
   }
 </script>
 
-
-
-
-  <!-- Footer: soft neutral -->
-  <footer class="bg-slate-200 py-6 text-center text-gray-700 text-sm">
-    © 2025 CalmBot. All rights reserved. Barnazaka_designed
-  </footer>
+<!-- Footer -->
+<footer class="bg-slate-200 py-6 text-center text-gray-700 text-sm">
+  © 2025 CalmBot. All rights reserved.
+</footer>
 
 </body>
 </html>
