@@ -206,7 +206,7 @@ Passionate about mental health, AI, and empowering healing journeys.
 
 ## 🙏 Acknowledgments
 
-* **Hackathon 2025:** For inspiring us to create CalmBot.
+* **Deepfunding Hackathon 2025:** For inspiring us to create CalmBot.
 * **Google Gemini:** For powering empathetic responses.
 * **Freesound.org:** For CC0 calming sounds.
 * **Open Source Community:** Flask, p5.js, and more.
