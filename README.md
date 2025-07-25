@@ -75,7 +75,7 @@ CalmBot is more than a tool—it’s a companion for those seeking to reclaim th
 
 ### Access CalmBot
 - Website: https://bot-1-txcf.onrender.com/
-- Telegram: Search for `@YourCalmBot`
+- Telegram: Search for `@calm56bot`
 
 ### Select Your Mood
 Click *Happy*, *Sad*, *Angry*, or *Anxious* to receive a Gemini-powered response.
@@ -98,7 +98,7 @@ Click *Happy*, *Sad*, *Angry*, or *Anxious* to receive a Gemini-powered response
 ## 💻 Installation
 
 ```bash
-git clone https://github.com/yourusername/calmbot.git
+git clone https://github.com/barnazaka/calmbot.git
 cd calmbot
 pip install flask python-telegram-bot google-generativeai python-dotenv textblob
 python -m textblob.download_corpora
@@ -199,12 +199,12 @@ MIT License. See [LICENSE](LICENSE) for details.
 
 ## 👥 Team
 
-Built with ❤️ by **\[Your Team Name]** for Hackathon 2025.
+Built with ❤️ by **\Team Kohdee** for Hackathon 2025.
 Passionate about mental health, AI, and empowering healing journeys.
 
-* 📧 Contact: [support@calmbot.com](mailto:support@calmbot.com)
-* 🐙 GitHub: [@yourusername](https://github.com/yourusername)
-* ✈️ Telegram: [@YourCalmBot](https://t.me/YourCalmBot)
+* 📧 Contact: [support@calmbot.com](mailto:barnazaka.com)
+* 🐙 GitHub: [@yourusername](https://github.com/barnazaka)
+* ✈️ Telegram: [@YourCalmBot](https://t.me/calm56bot)
 
 ---
 
