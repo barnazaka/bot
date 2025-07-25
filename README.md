@@ -199,12 +199,8 @@ MIT License. See [LICENSE](LICENSE) for details.
 
 ## 👥 Team
 
-Built with ❤️ by **\Team Kohdee** for Hackathon 2025.
+Built with ❤️ by **Team Kohdee** for Hackathon 2025.
 Passionate about mental health, AI, and empowering healing journeys.
-
-* 📧 Contact: [support@calmbot.com](mailto:barnazaka.com)
-* 🐙 GitHub: [@yourusername](https://github.com/barnazaka)
-* ✈️ Telegram: [@YourCalmBot](https://t.me/calm56bot)
 
 ---
 
