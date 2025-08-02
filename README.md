@@ -98,8 +98,8 @@ Click *Happy*, *Sad*, *Angry*, or *Anxious* to receive a Gemini-powered response
 ## 💻 Installation
 
 ```bash
-git clone https://github.com/barnazaka/calmbot.git
-cd calmbot
+git clone https://github.com/barnazaka/bot.git
+cd bot
 pip install flask python-telegram-bot google-generativeai python-dotenv textblob
 python -m textblob.download_corpora
 ````
