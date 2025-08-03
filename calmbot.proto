@@ -1,0 +1,47 @@
+syntax = "proto3";
+package calmbot;
+
+// Mood logging request
+message LogMoodRequest {
+  string user_id = 1;
+  string mood = 2; // e.g. "happiness", "sadness"
+}
+message LogMoodResponse {
+  string reply = 1;
+}
+
+// Chat request
+message ChatRequest {
+  string user_id = 1;
+  string message = 2;
+}
+message ChatResponse {
+  string reply = 1;
+}
+
+// Journal entry
+message JournalRequest {
+  string user_id = 1;
+  string mood = 2;        // optional
+  string entry = 3;
+}
+message JournalResponse {
+  string reply = 1;
+}
+
+// Progress stats
+message ProgressRequest {
+  string user_id = 1;
+}
+message ProgressResponse {
+  repeated string emotions = 1;
+  repeated int32 counts = 2;
+  string summary = 3;
+}
+
+service CalmbotService {
+  rpc LogMood(LogMoodRequest) returns (LogMoodResponse);
+  rpc Chat(ChatRequest) returns (ChatResponse);
+  rpc SaveJournal(JournalRequest) returns (JournalResponse);
+  rpc GetProgress(ProgressRequest) returns (ProgressResponse);
+}
